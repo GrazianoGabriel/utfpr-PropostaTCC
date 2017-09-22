@@ -1,0 +1,244 @@
+\section{Inteligência Computacional}
+
+As Redes Neurais Artificias (\sigla{RNA}{Redes Neurais Artificiais}) são processadores paralelamente distribuídos e compostos por unidades de processamento chamadas de neurônios artificiais, nos quais são interligados através de um grande numero de interconexões que permitem o armazenamento de um conhecimento experimental com o intuito de disponibiliza-lo para uso. Possuem a capacidade de adaptação por experiência e isso ocorre devido à exposição sucessiva de exemplos através de treinamentos que irão extrair uma relação existente entre as variáveis. Além disso, uma Rede Neural possui alta capacidade de generalização, na qual será capaz de estimar valores que não pertencem ao conjunto de amostras conhecidas por ela \cite{daredes}.
+
+As Redes Neurais são uma ferramenta de solução de problemas relacionados à engenharia e à outras áreas do conhecimento, como:
+
+\begin{itemize}
+	\item Classificação de Padrões
+	\item Controle de Processos
+	\item Previsão de Séries Temporais
+	\item Aproximador de Funções
+	\item Otimização
+\end{itemize}
+
+A arquitetura de funcionamento de um neurônio artificial foi proposta por McCulloch e Pitts em 1943 \cite{daredes}, e  é exemplificada pela Figura \ref{fig:redesimples}.
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/redesimples1.eps}
+}
+\caption{Arquitetura \textit{Feedforward} de um neurônio artificial.
+\label{fig:redesimples}}	\fonte{https://www.embarcados.com.br/redes-neurais-artificiais/}
+\end{figure}
+
+Matematicamente, as equações \ref{eq:redesimples} e \ref{eq:saidasimples} descrevem o comportamento do neurônio.
+
+\begin{equation}
+u  =  \sum_{i=1}^{N} x\textsubscript{n}.w\textsubscript{n} - \theta \\
+\label{eq:redesimples}
+\end{equation}
+
+\begin{equation}
+y = g(u) \\
+\label{eq:saidasimples}
+\end{equation}
+
+Onde,
+
+\begin{itemize}
+	\item \textit{X\textsubscript{n}} são as variáveis de entrada;
+	\item \textit{W\textsubscript{n}} são os pesos sinápticos de cada conexão das entradas;
+	\item $\theta$ é o limiar de ativação do neurônio;
+	\item \textit{u} é a saída do combinador linear;
+	\item \textit{g(.)} representa a função de ativação;
+	\item \textit{y} é o sinal de saída do neurônio.
+\end{itemize}
+A escolha da função de ativação deve ser feita a partir do sucesso da rede em resolver um problema, sendo assim, as funções mais utilizadas são:
+\begin{enumerate}
+\item[a)] \textbf{Função Degrau Unitário}
+
+A função degrau unitário irá retornar valores positivos menores que 1 sempre que o potencial de ativação for maior ou igual a zero. Para valores menores que zero, o retorno será sempre nulo conforme a Equação \ref{eq:degrau}.
+
+
+\begin{equation}
+\left\{\begin{array}{l}
+1,\ \ \ \ \ \ \ \  se\ \  u \geq 0\\
+0,\ \ \ \ \ \ \ \  se\ \   u < 0
+\end{array}\right\}
+\label{eq:degrau}
+\end{equation}
+
+
+\begin{figure}[H]
+\centering
+\fbox{
+\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/degrau.eps}
+}
+\caption{Função degrau unitário}
+\label{fig:degrau}
+\fonte{Autoria própria}.
+\end{figure}
+ 
+\item[b)] \textbf{Função Degrau Bipolar}
+
+Diferente da função degrau unitário, o degrau bipolar irá retornar -1 caso a saída \textit{u} seja menor que zero e 1 para valores maiores que zero.
+
+\begin{equation}
+\left\{\begin{array}{l}
+\ \ \ 1,\ \ \ \ \ \ \ \  se\ \  u \geq 0\\
+-1,\ \ \ \ \ \ \ \  se\ \   u < 0
+\end{array}\right\}
+\label{eq:degraubi}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+	\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/degraubipolar.eps}
+}
+	\caption{Função degrau bipolar}
+	\label{fig:degraubipolar}	
+	\fonte{Autoria própria}.
+\end{figure}
+
+\item[c)] \textbf{Função Rampa}
+
+Os valores de retorno são os mesmos valores dos potenciais de ativação definidos em um intervalo, caso contrário restringe-se aos valores limites conforme a Equação \ref{eq:rampa} e a Figura \ref{fig:rampa}.
+
+\begin{equation}
+\left\{\begin{array}{l}
+\ \ \ 1,\ \ \ \ \ \ \ \  se\ \  u \geq a\\
+\ \ \ u,\ \ \ \ \ \ \ \  se\ \   -a < u < a\\
+-1,\ \ \ \ \ \ \ \  se\ \  u \geq -a
+\end{array}\right\}
+\label{eq:rampa}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+	\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/rampa.eps}
+}
+	\caption{Função rampa}
+	\label{fig:rampa}	
+	\fonte{Autoria própria}.
+\end{figure}
+
+\item[d)] \textbf{Função Tangente Sigmóide}
+
+Comumente a mais utilizada, a função tangente sigmóide retorna valores reais dentro do domínio de -1 a 1, como mostrado na Figura \ref{fig:tansig}
+\begin{equation}
+g(u) = \frac{2}{1+e\textsuperscript{-2.u}} + 1
+\label{eq:tansig}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+	\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/tansig.eps}
+}
+	\caption{Função Tangente Sigmóide}
+	\label{fig:tansig}	
+	\fonte{Autoria própria}.
+\end{figure}
+
+
+
+\item[e)] \textbf{Função Logística}
+
+Diferente da função tangente sigmóide, a função logística retorna valores reais em um intervalo de 0 e 1, como mostra a Figura \ref{fig:logistica} e a Equação \ref{eq:logistica}.
+
+\begin{equation}
+g(u) = \frac{1}{1+e\textsuperscript{-$\beta$.u}}
+\label{eq:logistica}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+	\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/logistica.eps}
+}
+	\caption{Função Logística}
+	\label{fig:logistica}	
+	\fonte{Autoria própria}.
+\end{figure}
+
+\item[f)] \textbf{Função Gaussiana}
+
+A função Gaussiana retorna valores reais e positivos que estão dentro dos limites escolhidos a partir do centro \textit{C}, como mostra a Equação \ref{eq:gaussiana} e representado pela Figura \ref{fig:gaussiana}.
+
+\begin{equation}
+g(u) = e^-\frac{(u-C)^2}{2.\sigma^2}
+\label{eq:gaussiana}
+\end{equation}
+Onde, C determina o centro da função gaussiana e $\sigma$ é o desvio padrão.
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+	\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/gaussiana.eps}
+}
+	\caption{Função Gaussiana}
+	\label{fig:gaussiana}	
+	\fonte{Autoria própria}.
+\end{figure}
+
+\end{enumerate}
+
+\subsection{Camadas}
+
+A estrutura de uma Rede Neural é caracterizada por conter camadas. É necessário no mínimo duas camadas neurais para compor uma rede. A estrutura genérica de Redes Neurais Multicamadas é representada pela Figura \ref{fig:multicamadas}.
+
+Existem três categorias de camadas que podem ser descritas como:
+\begin{itemize}
+	\item Camada de Entrada;
+	\item Camadas Intermediárias ou Ocultas;
+	\item Camada de Saída.
+\end{itemize}
+
+A camada de entrada recebe os valores normalizados das informações de entrada do sistema. O número de neurônios disponíveis será igual ao número de variáveis de entrada.
+
+As camadas ocultas são responsáveis pela ponderação das informações processadas e através das interconexões de cada neurônio, permite à rede o poder de extração de características. Neste nível, a Rede Neural pode possuir uma ou mais camadas ocultas e a escolha do número de neurônios em cada camada é puramente empírica, uma vez que não exista um método matemático para determinação dos parâmetros de construção da Rede Neural.
+
+Por fim, na saída da rede existe a camada de saída onde serão expostos os resultados do processamento realizado nas camadas ocultas. A quantidade de neurônios na camada de saída corresponde ao número de variáveis de saída do processo \cite{daredes}.
+
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+	\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/multicamadas.eps}
+}
+	\caption{Rede Neural Multicamadas}
+	\label{fig:multicamadas}	
+	\fonte{https://www.embarcados.com.br/redes-neurais-artificiais/}.
+
+\end{figure}
+
+Cada neurônio presente nas camadas ocultas possui pesos sinápticos \textit{W\textsubscript{n}}, limiar $\theta$ e uma função de ativação (Figura \ref{fig:redesimples}). Por esse motivo, a capacidade computacional cresce exponencialmente conforme o aumento do número de neurônios nas camadas ocultas e também na quantidade de camadas ocultas utilizadas na rede.
+
+\subsection{Processo de Treinamento}
+A maior qualidade que uma Rede Neural possui é sua capacidade de aprendizado a partir da exposição de amostras. A extração de padrões entre as variáveis de entrada é feita a partir um processo iterativo, também chamado de treinamento.
+
+O objetivo do aprendizado é obter um modelo implícito do modelo estudado, ajustando os parâmetros da rede. A Figura \ref{fig:treinamento} mostra esse processo.
+
+A metodologia de um treinamento é dada por uma sequência de passos ordenados que tem como objetivo sintonizar os pesos sinápticos de cada conexão entre os neurônios para que a rede seja capaz de generalizar resultados. 
+
+O ajuste dos pesos $\Delta$\textit{w\textsubscript{k}} é dado ao peso \textit{w\textsubscript{k}} no instante de tempo \textit{k} gerando o valor corrigido \textit{w(k+1)}, como mostra a Equação \ref{eq:ajuste}.
+
+\begin{equation}
+w(k+1) = w(k) + \Delta w(k)
+\label{eq:ajuste}
+\end{equation}
+
+Existem diversos modelos de algoritmos de aprendizado, que diferem entre si pela forma com que ajustam e classificam os pesos sinápticos. Segundo \citeonline{daredes}, os algoritmos de aprendizado são classificados como:
+
+\begin{itemize}
+	\item Treinamento Supervisionado
+	\item Treinamento não Supervisionado
+	\item Treinamento com Reforço
+\end{itemize}
+
+No geral, o modelo de treinamento supervisionado é mais utilizado pois utiliza uma base de dados conhecida. Desse modo a rede pode comparar os valores obtidos com os valores de base à fim de minimizar o erro gerado.
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+		\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/treinamento.png}
+	}
+	\caption{Modelo de Aprendizado por uma Rede Neural}
+	\label{fig:treinamento}	
+	\fonte{ftp://vm1-dca.fee.unicamp.br/pub/docs/vonzuben/ia353\_01/topico3\_01.pdf}.
+	
+\end{figure}

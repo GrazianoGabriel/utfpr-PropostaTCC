@@ -1,0 +1,223 @@
+
+##Dicas de formatação Latex
+
+\citeauthoronline{} %Faz a citação
+\cite{}
+
+#Exemplo de figura
+
+\begin{figure}[H]
+\centering
+\fbox{
+\includegraphics[width=10cm, height=8cm,keepaspectratio]{./Figuras/roboABB.eps}
+	}
+	\caption{Robô industrial ABB IRB 1600.}
+	\label{fig:roboABB} \fonte{http://www.directindustry.com/pt/prod/abb-roboticsproduct-30265-169124.html}
+	\end{figure}
+
+#Referencias
+
+@thesis{ID,
+	author = {author},
+	title = {title},
+	type = {type},
+	institution = {institution},
+	date = {date},
+}
+
+
+@book{kasabov1996foundations,
+	title={Foundations of Neural Networks, Fuzzy Systems, and Knowledge Engineering},
+	author={Kasabov, N.K.},
+	isbn={9780262112123},
+	lccn={95050054},
+	series={A Bradford book},
+	url={https://books.google.com.py/books?id=9bdwtUQLchIC},
+	year={1996},
+	publisher={MIT Press}
+}
+
+@book{iso8373,
+	title={ISO 8373: Robots and Robotic Devices - Vocabulary},
+	author={International Organization for Standardization. Technical Committee Automation systems and integration. Subcommittee Robots and robotic devices},
+	url={https://books.google.com.br/books?id=8SWdjwEACAAJ},
+	year={2012},
+	publisher={ISO}
+}
+@book{rosário2005princípios,
+	title={Princ{\'\i}pios de mecatr{\^o}nica},
+	author={Ros{\'a}rio, J.M.},
+	isbn={9788576050100},
+	url={https://books.google.com.br/books?id=8uflAAAACAAJ},
+	year={2005},
+	publisher={PRENTICE HALL BRASIL}
+}
+@book{hanggi2013cellular,
+	title={Cellular Neural Networks: Analysis, Design and Optimization},
+	author={H{\"a}nggi, M. and Moschytz, G.S.},
+	isbn={9781475732207},
+	url={https://books.google.com.br/books?id=yKcACAAAQBAJ},
+	year={2013},
+	publisher={Springer US}
+}
+@book{daredes,
+	title={REDES NEURAIS ARTIFICIAIS PARA ENGENHARIA E: CIENCIAS APLICADAS - CURSO PRATICO},
+	author={DA SILVA, I.N. and SPATTI, D.H. and FLAUZINO, R.A.},
+	isbn={9788588098534},
+	url={https://books.google.com.br/books?id=w2VHbwAACAAJ},
+	year = {2010}
+	publisher={ARTLIBER}
+}
+@book{siler2005fuzzy,
+	title={Fuzzy Expert Systems and Fuzzy Reasoning},
+	author={Siler, W. and Buckley, J.J.},
+	isbn={9780471698494},
+	url={https://books.google.com.br/books?id=MQNtBFmVfswC},
+	year={2005},
+	publisher={Wiley}
+}
+@book{mataricintroducao,
+	title={INTRODU{\c{C}}AO A ROBOTICA},
+	author={MATARIC, M.J. and KOENIG, N. and FILHO, H.F. and SILVA, J.R. and DOS REIS ALVES, S.F.},
+	isbn={9788539304905},
+	url={https://books.google.com.br/books?id=SzItvgAACAAJ},
+	publisher={UNESP}
+}
+@book{niku2010introduction,
+	title={Introduction to Robotics},
+	author={Niku, S.},
+	isbn={9780470604465},
+	lccn={2010024723},
+	url={https://books.google.com.br/books?id=2V4aGvlGt7IC},
+	year={2010},
+	publisher={John Wiley \& Sons}
+}
+@book{craig,
+	title={Introduction to Robotics: Mechanics and Control},
+	author={Craig, J.J.},
+	isbn={9780201543612},
+	lccn={88037607},
+	series={Addison-Wesley series in electrical and computer engineering: control engineering},
+	url={https://books.google.com.br/books?id=MqMeAQAAIAAJ},
+	year={2005},
+	publisher={Pearson/Prentice Hall}
+}
+@book{Aguirre,
+	title={Enciclop{\'e}dia de autom{\'a}tica: Controle e automa{\c{c}}{\~a}o},
+	author={Aguirre, L.A.},
+	isbn={9788521204091},
+	url={https://books.google.com.br/books?id=r3KrPgAACAAJ},
+	year={2007},
+	publisher={Blucher}
+}
+@article{andres2014robust,
+	title={Robust generalized predictive control of the Orthoglide robot},
+	author={Andres Lara-Molina, Fabian and Maur\'icio Ros\'ario, Jo\~ao and Dumur, Didier and Wenger, Philippe},
+	journal={Industrial Robot: An International Journal},
+	volume={41},
+	number={3},
+	pages={275--285},
+	year={2014},
+	publisher={Emerald Group Publishing Limited}
+}
+@article{carvalho,
+	title={NOVOS RESULTADOS SOBRE A ESTABILIDADE E CONTROLE DE SISTEMAS N{\~A}O-LINEARES UTILIZANDO MODELOS FUZZY E LMI},
+	author={Carvalho Minhoto Teixeira, Marcelo and Cleber Pietrobom, Hilton and Assun{\c{c}}{\~a}o, Edvaldo},
+	journal={Revista Controle \& Automa{\c{c}}{\~a}o},
+	volume={11},
+	number={01},
+	pages={37--48},
+	year={2000},
+	publisher={}
+}
+@article{liu,
+	title={Optimum design of the 5R symmetrical parallel manipulator with a surrounded and good-condition workspace},
+	author={Liu, Xin-Jun and Wang, Jinsong and Zheng, Hao-Jun},
+	journal={Robotics and Autonomous Systems},
+	volume={54},
+	number={},
+	pages={221--233},
+	year={2005},
+	publisher={Elsevier B.V.}
+}
+@Article{ayala,
+	author =  {Helton Vicente Hultmann Ayala, Viviane Dal Molin de Souza, Leandro dos Santos Coelho},
+	title =   {Otimiza\c{c}\~ao Multiobjetivo Usando Enxame De Part\'iculas De Controladores Multivari\'aveis Para Uma Aplica\c{c}\~ao Em Rob\'otica},
+	journal = {Simp\'osio Brasileiro de Automa\c{c}\~ao Inteligente},
+	year =    {2009}
+}
+@Book{Jan_J.,
+	title =     {Foundations of Fuzzy Control},
+	publisher = {Wiley},
+	year =      {2007},
+	author =    {Jan Jantzen}
+}
+@inproceedings{lara2015set,
+	title={Set-Point Regulation of a Robot Manipulator with Flexible Joints Using Fuzzy Control},
+	author={Lara-Molina, FA and Takano, KA and Koroishi, EH},
+	booktitle={2015 12th Latin American Robotics Symposium and 2015 3rd Brazilian Symposium on Robotics (LARS-SBR)},
+	pages={103--108},
+	year={2015},
+	organization={IEEE}
+}
+@article{molina2012simulaccao,
+	title={Simula\c{c}\~ao e implementa\c{c}\~ao experimental de um controlador preditivo generalizado para um rob\^o orthoglide baseado na modelagem din\^amica},
+	author={Molina, Fabian Andres Lara and others},
+	year={2012},
+	publisher={Campinas, SP:[}
+}
+@article{paccot2009review,
+	title={A review on the dynamic control of parallel kinematic machines: Theory and experiments},
+	author={Paccot, Flavien and Andreff, Nicolas and Martinet, Philippe},
+	journal={The International Journal of Robotics Research},
+	volume={28},
+	number={3},
+}	
+@book{rezende2003sistemas,
+	title={Sistemas inteligentes: fundamentos e aplica{\c{c}}{\~o}es},
+	author={Rezende, S.O.},
+	isbn={9788520416839},
+	url={https://books.google.com.br/books?id=UsJe\_PlbnWcC},
+	year={2003},
+	publisher={Manole}
+}
+@book{khalil2013nonlinear,
+	title={Nonlinear Systems},
+	author={Khalil, H.K.},
+	isbn={9781292039213},
+	series={Always learning},
+	url={https://books.google.com.br/books?id=VZ72nQEACAAJ},
+	year={2013},
+	publisher={Pearson Education, Limited}
+}
+
+@book{nise2002engenharia,
+	title={Engenharia de sistemas de controle},
+	author={Nise, N.S.},
+	isbn={9788521613015},
+	url={https://books.google.com.br/books?id=uWG5AAAACAAJ},
+	year={2002},
+	publisher={LTC}
+}
+
+@book{poole2010artificial,
+  title={Artificial Intelligence: Foundations of Computational Agents},
+  author={Poole, D.L. and Mackworth, A.K.},
+  isbn={9780521519007},
+  lccn={2009039895},
+  series={Artificial Intelligence: Foundations of Computational Agents},
+  url={https://books.google.com.br/books?id=eALhh\_tkpv4C},
+  year={2010},
+  publisher={Cambridge University Press}
+}
+
+@book{pagallo2013laws,
+	title={The Laws of Robots: Crimes, Contracts, and Torts},
+	author={Pagallo, U.},
+	isbn={9789400765641},
+	lccn={2013937543},
+	series={Law, Governance and Technology Series},
+	url={https://books.google.com.br/books?id=ZJhB7KHuo\_UC},
+	year={2013},
+	publisher={Springer Netherlands}
+}
