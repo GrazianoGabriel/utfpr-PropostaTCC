@@ -7,11 +7,6 @@ A level-1 auxiliary file: ./Capitulos/capitulo5.aux
 The style file: abnt-alf.bst
 Database file #1: abnt-options.bib
 Database file #2: ./Referencias/reflatex.bib
-I was expecting a `,' or a `}'---line 50 of file ./Referencias/reflatex.bib
- :  
- :  publisher={ARTLIBER}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "abnt-etal-list=99"
 +---------------------------------------------------------+
 | Estilo bibliografico abnt-alf.bst versao 1.52           |
@@ -19,4 +14,4 @@ Warning--I didn't find a database entry for "abnt-etal-list=99"
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-(There was 1 error message)
+(There was 1 warning)

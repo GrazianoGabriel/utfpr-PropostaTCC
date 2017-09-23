@@ -9,11 +9,13 @@
 %% Italo Macedo Laino, Engenharia de Computação (UTFPR-CP, 12/2015)
 %% Profa. Dra. Erica Ferreira de Souza (UTFPR-CP, 03/2016)
 
-\documentclass[openright]{normas-utf-tex} %openright = o capitulo comeca sempre em paginas impares
-%\documentclass[oneside]{normas-utf-tex} %oneside = para dissertacoes com numero de paginas menor que 100 (apenas frente da folha) 
+%\documentclass[openright]{normas-utf-tex} %openright = o capitulo comeca sempre em paginas impares
+\documentclass[oneside]{normas-utf-tex} %oneside = para dissertacoes com numero de paginas menor que
+%100 (apenas frente da folha) 
 
 
-\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite} %configuracao correta das referencias bibliograficas.
+\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite}
+%configuracao correta das referencias bibliograficas.
 
 \usepackage{longtable}
 \usepackage[brazil]{babel} % pacote portugues brasileiro
@@ -23,6 +25,8 @@
 \usepackage{times} % fonte times
 \usepackage{chngcntr} 
 \usepackage{float}
+\usepackage{array}
+\usepackage{multirow}
 \usepackage{amsmath}
 \usepackage{multicol}
 \counterwithout{equation}{chapter}
@@ -31,7 +35,8 @@
 \counterwithout{table}{chapter}
 
 
-%Podem utilizar GEOMETRY{...} para realizar pequenos ajustes das margens. Onde, left=esquerda, right=direita, top=superior, bottom=inferior. P.ex.:
+%Podem utilizar GEOMETRY{...} para realizar pequenos ajustes das margens. Onde, left=esquerda,
+%right=direita, top=superior, bottom=inferior. P.ex.:
 %\geometry{left=3.0cm,right=1.5cm,top=4cm,bottom=1cm} 
 
 % ---------- Preambulo (OBRIGATÓRIO) ----------
@@ -59,7 +64,7 @@
 \comentario{\UTFPRdocumentodata\ de graduação do curso de Engenharia de Controle e Automação da \ABNTinstituicaodata\ - UTFPR, como requisito parcial para obten\c{c}\~ao do grau de Bacharel.}
 
 %\orientador{Professor Doutor Rogério Pozza} % nome do orientador do trabalho
-\orientador[Orientadora:]{Profº.Dr.Andre Sanches Fonseca Sobrinho} % <- no caso de orientadora, usar esta sintaxe
+\orientador[Orientador:]{Profº.Dr. Andre Sanches Fonseca Sobrinho} % <- no caso de orientadora, usar esta sintaxe
 %\coorientador{Profº.Dr.} % nome do co-orientador do trabalho, caso exista
 %\coorientador[Co-orientadora:]{Nome da Co-orientadora} % <- no caso de co-orientadora, usar esta sintaxe
 %\coorientador[Co-orientadores:]{Nome do Co-orientador} % no caso de 2 co-orientadores, usar esta sintaxe
