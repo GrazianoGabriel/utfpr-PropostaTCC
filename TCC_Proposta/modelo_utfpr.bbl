@@ -5,4 +5,29 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.52 }
 
+\bibitem[Demuth et al. 2014]{demuth2014neural}
+\abntrefinfo{Demuth et al.}{DEMUTH et al.}{2014}
+{DEMUTH, H.~B. et al. \textbf{Neural network design}. [S.l.]: Martin Hagan,
+  2014.}
+
+\bibitem[Fitzer et al. 2002]{fitzer2002voltage}
+\abntrefinfo{Fitzer et al.}{FITZER et al.}{2002}
+{FITZER, C.; BARNES, M.; GREEN, P. Voltage sag detection technique for a
+  dynamic voltage restorer. In:  IEEE. \textbf{Industry Applications
+  Conference, 2002. 37th IAS Annual Meeting. Conference Record of the}. [S.l.],
+  2002. v.~2, p. 917--924.}
+
+\bibitem[Haque 2001]{haque2001compensation}
+\abntrefinfo{Haque}{HAQUE}{2001}
+{HAQUE, M. Compensation of distribution system voltage sag by dvr and
+  d-statcom. In:  IEEE. \textbf{Power Tech Proceedings, 2001 IEEE Porto}.
+  [S.l.], 2001. v.~1, p. 5--pp.}
+
+\bibitem[Sarmiento e Estrada 1996]{sarmiento1996voltage}
+\abntrefinfo{Sarmiento e Estrada}{SARMIENTO; ESTRADA}{1996}
+{SARMIENTO, H.~G.; ESTRADA, E. A voltage sag study in an industry with
+  adjustable speed drives.
+\textbf{IEEE industry applications magazine}, IEEE, v.~2, n.~1, p. 16--19,
+  1996.}
+
 \end{thebibliography}
