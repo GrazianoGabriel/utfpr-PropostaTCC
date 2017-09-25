@@ -6,6 +6,8 @@
 \contentsline {section}{\numberline {1.4}\MakeUppercase {Organiza\c c\~ao do Texto}}{9}
 \contentsline {chapter}{\numberline {2}\MakeUppercase {FUNDAMENTA\c C\~AO TE\'ORICA}}{10}
 \contentsline {section}{\numberline {2.1}\MakeUppercase {Varia\c c\~oes de Tens\~ao de Curta Dura\c c\~ao}}{10}
+\contentsline {section}{\numberline {2.2}\MakeUppercase {PIC}}{10}
+\contentsline {section}{\numberline {2.3}\MakeUppercase {Circuito Integrado ADE7758}}{10}
 \contentsline {chapter}{\numberline {3}\MakeUppercase {METODOLOGIA}}{11}
 \contentsline {chapter}{\numberline {4}\MakeUppercase {Cronograma}}{12}
 \contentsline {chapter}{REFER\^ENCIAS}{13}
