@@ -5,19 +5,17 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.52 }
 
-\bibitem[AGENCIA NACIONAL DE ENERGIA ELETRICA 2011]{aneel2011qualidade}
-\abntrefinfo{AGENCIA NACIONAL DE ENERGIA ELETRICA}{AGENCIA NACIONAL DE ENERGIA
-  ELETRICA}{2011}
-{AGENCIA NACIONAL DE ENERGIA ELETRICA. \textbf{Procedimentos de Distribuicao de
-  Energia Eletrica no Sistema Eletrico Nacional (PRODIST) - Modulo 8 -
-  Qualidade de Energia}.
-[S.l.], 2011.}
-
 \bibitem[Analog Devices 2011]{analogdevices:ade7758}
 \abntrefinfo{Analog Devices}{ANALOG DEVICES}{2011}
 {ANALOG DEVICES. \textbf{Poly Phase Multifunction Energy Metering IC with Per
   Phase Information - ADE7758 Datasheet}.
 [S.l.], 2011. Rev. E.}
+
+\bibitem[ANEEL 2011]{aneel2011qualidade}
+\abntrefinfo{ANEEL}{ANEEL}{2011}
+{ANEEL. \textbf{Procedimentos de Distribuicao de Energia Eletrica no Sistema
+  Eletrico Nacional (PRODIST) - Modulo 8 - Qualidade de Energia}.
+[S.l.], 2011.}
 
 \bibitem[Dugan et al. 2002]{dugan2002electrical}
 \abntrefinfo{Dugan et al.}{DUGAN et al.}{2002}
