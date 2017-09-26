@@ -2,8 +2,24 @@
 % CAPÍTULO 2
 \chapter{FUNDAMENTAÇÃO TEÓRICA}  
 \section{Variações de Tensão de Curta Duração}
-Segundo o módulo 8 do PRODIST, publicado pela ANEEL, variações de tensão de curta duração são desvios significativos no valor eficaz da tensão em curtos intervalos de tempo. 
-Essas variações podem ser momentâneas ou temporárias, classificadas de acordo com a tabela \ref{tab:VTCD}:
+Segundo o módulo 8 do PRODIST, publicado pela ANEEL, variações de tensão de curta duração (VTCD) são desvios significativos no valor eficaz da tensão em curtos intervalos de tempo. 
+Essas variações podem ser momentâneas ou temporárias. \cite{aneel2011qualidade}
+
+Usualmente a VTCD refere-se à tensão fase-neutro, podendo ser descrita monofasicamente pelos parâmetros amplitude e duração. O primeiro, levando-se em consideração um determinado ponto do sistema, é definido pelo valor extremo do valor eficaz da tensão em relação à tensão nominal, durante toda a duração do evento. \cite{ons2gerenciamento}
+
+Já a duração da VTCD é dada pelo tempo percorrido entre o momento em que o valor eficaz da tensão em relação à tensão nominal do sistema ultrapassa um determinado limite e o momento em que volta ao normal. \cite{ons2gerenciamento}
+
+A partir dos parâmetros de amplitude e duração, os eventos de VTCD podem ser classificados, de forma geral, como:
+
+\subsection{Interrupção de Tensão}
+
+A interrupção da tensão, com tempo máximo de três minutos, ocorre quando a amplitude da tensão descresce para um valor entre 0 e 0,1 p.u.
+
+\subsection{Afundamento de Tensão}
+
+O afundamento de tensão é caracterizado por uma tensão remanescente entre 0,1 e 0,9 p.u.
+
+\subsection{Elevação de Tensão}
 
 \begin{table}[H]
 	\centering
@@ -30,9 +46,8 @@ Essas variações podem ser momentâneas ou temporárias, classificadas de acordo co
 \end{table}
 
 
-
-\section{PIC}
+\section{Cerebot MX7cK}
 
 \section{Circuito Integrado ADE7758}
 
-
+\cite{analogdevices:ade7758} 

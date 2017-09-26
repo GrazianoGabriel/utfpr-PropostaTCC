@@ -5,14 +5,29 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.52 }
 
-\bibitem[ANEEL 2010]{aneel2010modulo}
-\abntrefinfo{ANEEL}{ANEEL}{2010}
-{ANEEL, P. M{\'o}dulo 8--“qualidade da energia el{\'e}trica”.
-\textbf{Resolu{\c{c}}{\~a}o Normativa}, n.~424, p.~2011, 2010.}
+\bibitem[AGENCIA NACIONAL DE ENERGIA ELETRICA 2011]{aneel2011qualidade}
+\abntrefinfo{AGENCIA NACIONAL DE ENERGIA ELETRICA}{AGENCIA NACIONAL DE ENERGIA
+  ELETRICA}{2011}
+{AGENCIA NACIONAL DE ENERGIA ELETRICA. \textbf{Procedimentos de Distribuicao de
+  Energia Eletrica no Sistema Eletrico Nacional (PRODIST) - Modulo 8 -
+  Qualidade de Energia}.
+[S.l.], 2011.}
+
+\bibitem[Analog Devices 2011]{analogdevices:ade7758}
+\abntrefinfo{Analog Devices}{ANALOG DEVICES}{2011}
+{ANALOG DEVICES. \textbf{Poly Phase Multifunction Energy Metering IC with Per
+  Phase Information - ADE7758 Datasheet}.
+[S.l.], 2011. Rev. E.}
 
 \bibitem[Dugan et al. 2002]{dugan2002electrical}
 \abntrefinfo{Dugan et al.}{DUGAN et al.}{2002}
 {DUGAN, R.~C. et al. \textbf{Electrical power systems quality}. [S.l.]: USA:
   McGraw-Hill, 2002.}
+
+\bibitem[ONS 2011]{ons2gerenciamento}
+\abntrefinfo{ONS}{ONS}{2011}
+{ONS, P. d.~R. \textbf{Gerenciamento dos indicadores de Desempenho da Rede
+  Basica e seus Componentes}.
+[S.l.], 2011.}
 
 \end{thebibliography}
