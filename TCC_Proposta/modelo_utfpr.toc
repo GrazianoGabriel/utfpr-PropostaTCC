@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {2.1.1}Interrup\c c\~ao de Tens\~ao}{10}
 \contentsline {subsection}{\numberline {2.1.2}Afundamento de Tens\~ao}{11}
 \contentsline {subsection}{\numberline {2.1.3}Eleva\c c\~ao de Tens\~ao}{11}
-\contentsline {section}{\numberline {2.2}\MakeUppercase {Cerebot MX7cK}}{11}
+\contentsline {section}{\numberline {2.2}\MakeUppercase {Microcontrolador PIC}}{11}
 \contentsline {section}{\numberline {2.3}\MakeUppercase {Circuito Integrado ADE7758}}{11}
 \contentsline {chapter}{\numberline {3}\MakeUppercase {METODOLOGIA}}{12}
 \contentsline {chapter}{\numberline {4}\MakeUppercase {Cronograma}}{13}
