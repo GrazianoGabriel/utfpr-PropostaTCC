@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  26 SEP 2017 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  29 SEP 2017 12:06
 entering extended mode
 **./modelo_utfpr.tex
 (modelo_utfpr.tex
@@ -589,12 +589,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\OT1/ptm/b/n/12 Amplitude da
  []
 
-) [11]
+<./Figuras/ADE7758.png, id=38, 532.99126pt x 541.02126pt>
+File: ./Figuras/ADE7758.png Graphic file (type png)
+
+<use ./Figuras/ADE7758.png>
+Package pdftex.def Info: ./Figuras/ADE7758.png used on input line 67.
+(pdftex.def)             Requested size: 168.17778pt x 170.71153pt.
+ [11]
+<./Figuras/SagDetec.png, id=43, 651.43375pt x 537.00626pt>
+File: ./Figuras/SagDetec.png Graphic file (type png)
+
+<use ./Figuras/SagDetec.png>
+Package pdftex.def Info: ./Figuras/SagDetec.png used on input line 80.
+(pdftex.def)             Requested size: 227.61755pt x 187.63544pt.
+
+Overfull \hbox (17.92339pt too wide) in paragraph at lines 85--86
+\OT1/ptm/m/n/12 Como o re-gis-tra-dor de ci-clos de afun-da-mento in-dica um li
+-miar de seis ci-clos (SEGCYC[7:0]=0x06),
+ []
+
+[12 <./Figuras/ADE7758.png> <./Figuras/SagDetec.png>]
+<./Figuras/VPEAK.png, id=48, 666.49pt x 500.87125pt>
+File: ./Figuras/VPEAK.png Graphic file (type png)
+ <use ./Figuras/VPEAK.png>
+Package pdftex.def Info: ./Figuras/VPEAK.png used on input line 97.
+(pdftex.def)             Requested size: 227.62057pt x 171.05823pt.
+
+<./Figuras/SwellDetec.png, id=49, 829.0975pt x 647.41875pt>
+File: ./Figuras/SwellDetec.png Graphic file (type png)
+
+<use ./Figuras/SwellDetec.png>
+Package pdftex.def Info: ./Figuras/SwellDetec.png used on input line 106.
+(pdftex.def)             Requested size: 227.61667pt x 177.7394pt.
+) [13 <./Figuras/VPEAK.png>] [14 <./Figuras/SwellDetec.png>]
 \openout2 = `./Capitulos/capitulo3.aux'.
 
  (Capitulos/capitulo3.tex
 Cap\'{\i }tulo 3.
-) [12
+) [15
 
 
 
@@ -608,7 +640,7 @@ Overfull \hbox (22.07396pt too wide) in paragraph at lines 22--23
  [][] 
  []
 
-) [13
+) [16
 
 
 
@@ -618,7 +650,7 @@ Overfull \hbox (22.07396pt too wide) in paragraph at lines 22--23
  (Capitulos/capitulo5.tex) (modelo_utfpr.bbl)
 
 AED: lastpage setting LastPage
-[14
+[17
 
 
 
@@ -632,19 +664,20 @@ AED: lastpage setting LastPage
 (Capitulos/capitulo3.aux) (Capitulos/capitulo4.aux) (Capitulos/capitulo5.aux)) 
 ) 
 Here is how much of TeX's memory you used:
- 5028 strings out of 493299
- 67445 string characters out of 3136791
- 161134 words of memory out of 3000000
- 8336 multiletter control sequences out of 15000+200000
- 32826 words of font info for 75 fonts, out of 3000000 for 9000
+ 5057 strings out of 493299
+ 68011 string characters out of 3136791
+ 161170 words of memory out of 3000000
+ 8358 multiletter control sequences out of 15000+200000
+ 33962 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,16n,45p,632b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/times/utmr8a.pfb>
-Output written on modelo_utfpr.pdf (15 pages, 56814 bytes).
+ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on modelo_utfpr.pdf (18 pages, 295540 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

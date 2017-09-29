@@ -60,4 +60,50 @@ A elevação de tensão é definida por um aumento no valor eficaz da tensão entre 1
 
 \section{Circuito Integrado ADE7758}
 
-\cite{analogdevices:ade7758} 
+O ADE7758 é um circuito integrado medidor de energia elétrica trifásica, de alta precisão, com interface serial e duas saídas de pulso fabricado pela empresa \textit{Analog Devices}. \cite{analogdevices:ade7758} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/ADE7758.png}
+\caption{Configuração de pinos do CI ADE7758}
+\label{fig:ade7758} \fonte{\cite{analogdevices:ade7758}}
+\end{figure}
+
+Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis, descritas abaixo.
+
+\subsection{Detecção de afundamento de tensão de linha}
+
+A função de detecção de afundamento de tensão de linha permite verificar quando o valor absoluto de qualquer uma das fases da tensão cair abaixo de um certo valor predeterminado, durante um número de meio ciclos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=8cm,keepaspectratio]{./Figuras/SagDetec.png}
+\caption{Detecção de afundamento de tensão}
+\label{fig:SagDetec} \fonte{\cite{analogdevices:ade7758}}
+\end{figure} 	
+
+A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão de linha cai abaixo de um limiar definido no registrador de nível de afundamento (SAGLVL[7:0]) durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo quando o SAG flag da fase correspondente no interrupt status register (Bit 1 até Bit 3 no interrupt status register) \cite{analogdevices:ade7758}. %Pag 25 datasheet
+
+%SAG LEVEL SET
+
+\subsection{Detecção de tensão de pico} %Pag 26 datasheet
+
+O \sigla{CI}{Circuito Integrado} ADE7758 possui o registrador VPEAK, que armazena o valor absoluto de pico da forma de onda da tensão, dentro de um número fixo de meio ciclos. Além disso, multiplas fases podem ser ativadas para essa detecção simultânea através da configuração dos bits de PEAKSEL[2:4], no registrador MMODE. Esses bits podem selecionar fase para medição da tensão e da corrente. \cite{analogdevices:ade7758}
+
+A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão de pico.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=8cm,keepaspectratio]{./Figuras/VPEAK.png}
+\caption{Detecção da tensão de pico usando o registrador VPEAK}
+\label{fig:VPEAK} \fonte{\cite{analogdevices:ade7758}}
+\end{figure} 
+
+\subsection{Interrupção de Detecção de Sobretensão}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=8cm,keepaspectratio]{./Figuras/SwellDetec.png}
+\caption{Detecção de elevação de tensão}
+\label{fig:SwellDetec} \fonte{\cite{analogdevices:ade7758}}
+\end{figure}
