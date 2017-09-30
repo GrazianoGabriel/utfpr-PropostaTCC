@@ -2,34 +2,68 @@
 % CAPÍTULO 2
 \chapter{FUNDAMENTAÇÃO TEÓRICA}  
 \section{Variações de Tensão de Curta Duração}
-Segundo o módulo 8 do PRODIST, publicado pela ANEEL, variações de tensão de curta duração (\sigla{VTCD}{Variações de Tensão de Curta Duração}) são desvios significativos no valor eficaz da tensão em curtos intervalos de tempo. 
-Essas variações podem ser momentâneas ou temporárias. \cite{aneel2011qualidade}
+Variações de tensão de curta duração (\sigla{VTCD}{Variações de Tensão de Curta Duração}) são desvios significativos no valor eficaz da tensão em curtos intervalos de tempo. 
+Essas variações podem ser momentâneas ou temporárias, tendo como principais causas condições de falta, energização de grandes cargas que demandam correntes altas de partida e conexões frouxas intermitentes nos cabos de energia \cite{aneel2011qualidade} \cite{machado2006detecccao}.
 
-Usualmente a VTCD refere-se à tensão fase-neutro, podendo ser descrita monofasicamente pelos parâmetros amplitude e duração. O primeiro, levando-se em consideração um determinado ponto do sistema, é definido pelo valor extremo do valor eficaz da tensão em relação à tensão nominal, durante toda a duração do evento. \cite{ons2gerenciamento}
+Usualmente as VTCD referem-se à tensão fase-neutro, podendo ser descritas monofasicamente por dois parâmetros, amplitude e duração. A amplitude, levando-se em consideração um determinado ponto do sistema, é definida pelo valor extremo do valor eficaz da tensão em relação à tensão nominal, enquanto durar o evento \cite{ons2gerenciamento}.
 
-A duração da VTCD é dada pelo tempo percorrido entre o momento em que o valor eficaz da tensão em relação à tensão nominal do sistema ultrapassa um determinado limite e o momento em que volta ao normal. \cite{ons2gerenciamento}
+A duração das VTCD é caracterizada pelo tempo percorrido entre o momento em que o valor eficaz da tensão em relação à tensão nominal do sistema ultrapassa um determinado limite e o momento em que volta ao valor anterior \cite{ons2gerenciamento}.
 
-A partir dos parâmetros de amplitude e duração, os eventos de VTCD podem ser classificados, de forma geral, como:
+De acordo com a duração de cada evento, as VTCD podem ser classificadas como ilustrado na tabela \ref{tab:tipos}:
 
-\begin{itemize}
-\item[-]Instantâneos (0.5 a 30 ciclos)
-\item[-]Momentâneos (30 ciclos a 3 segundos)
-\item[-]Temporários (3 segundos a 3 minutos)
-\end{itemize}
+\begin{table}[H]
+\centering
+\caption{Tipos de VTCD}
+\label{tab:tipos}
+\scalebox{0.9}{
+\begin{tabular}{ |c|c| }
+\hline
+\textbf{Tipo} & \textbf{Duração} \\ \hline
+Instantâneos & 0.5 a 30 ciclos \\ \hline
+Momentâneos & 30 ciclos a 3 segundos \\ \hline
+Temporários & 3 segundos a 3 minutos \\ 
+\hline
+\end{tabular}}
+\end{table}
+ 
+\subsection{Interrupção de Tensão (\textit{Interruption})}
 
-Com falhas do tipo: 
+A interrupção ocorre quando a amplitude da tensão descresce para um valor menor que 0,1 pu, em um período de até 3 minutos. Algumas de suas principais causas são falhas de equipamento, falhas no sistema de energia e mau funcionamento de controladores \cite{ieee20091159}.
 
-\subsection{Interrupção de Tensão}
+A figura \ref{fig:interrupt} ilustra a ocorrência de uma interrupção momentânea, com a tensão caindo para 0 durante aproximadamente 2 segundos. O primeiro gráfico apresenta a variação da tensão eficaz (rms) durante todo o evento, enquanto o segundo apresenta a variação do valor instantâneo da tensão durante o inicio da interrupção.    
 
-A interrupção da tensão, com tempo máximo de três minutos, ocorre quando a amplitude da tensão descresce para um valor entre 0 e 0,1 p.u.
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/Interrupt.png}
+\caption{Interrupção momentânea de tensão}
+\label{fig:interrupt} \fonte{\cite{ieee20091159}}
+\end{figure}
 
-\subsection{Afundamento de Tensão}
+\subsection{Afundamento de Tensão (\textit{Voltage Sag})}
 
-O afundamento de tensão é caracterizado por uma tensão remanescente entre 0,1 e 0,9 p.u.
+O afundamento ocorre quando a tensão decai para um valor entre 0,1 e 0,9 pu (tensão remanescente de 0,1 a 0,9 pu). Esse evento é geralmente associado à falhas no sistema, comutação de cargas pesadas e acionamento de grandes motores \cite{ieee20091159}.
 
-\subsection{Elevação de Tensão}
+A figura \ref{fig:sag} ilustra um afundamento instantâneo com tensão remanescente de aproximadamente 0,2 pu. No primeiro gráfico, o afundamento é mostrado pela variação da tensão eficaz, com uma escala em segundos. No gráfico abaixo, a forma de onda completa da tensão (com escala em milisegundos) mostra uma oscilação maior do valor durante a duração do evento. 
 
-A elevação de tensão é definida por um aumento no valor eficaz da tensão entre 1,1 e 1,8 p.u.
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/sag.png}
+\caption{Afundamento instantâneo de tensão}
+\label{fig:sag} \fonte{\cite{ieee20091159}}
+\end{figure}
+
+\subsection{Elevação de Tensão (\textit{Voltage Swell})}
+
+A elevação de tensão é definida por um aumento na tensão eficaz acima de 1,1 pu, com duração descrita na tabela \ref{tab:VTCD}. Assim como ocorre com o afundamento, sua ocorrência está associada à condições de falhas no sistema, desligamento de grandes cargas ou bancos de capacitores \cite{ieee20091159}.
+
+A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão em um sistema, com dois gráficos indicando as variações da tensão instantânea e da eficaz. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/swell.png}
+\caption{Elevação instantânea de tensão}
+\label{fig:swell} \fonte{\cite{ieee20091159}}
+\end{figure}
 
 \begin{table}[H]
 	\centering
@@ -100,6 +134,8 @@ A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão 
 \end{figure} 
 
 \subsection{Interrupção de Detecção de Sobretensão}
+
+Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sobretensão, quando o valor absoluto da tensão excede um limiar configurado no registrador VPINTLVL[7:0]. O Bit 14 (\textit{PKV flag}) do registrador de interrupção é responsável por gravar a ocorrência da sobretensão. Assim como na detecção de tensão de pico, multiplas fases de tensão e corrente podem ser monitoradas individualmente a partir da configuração dos bits PKIRQSEL[5:7] do registrador MMODE \cite{analogdevices:ade7758}. 	
 
 \begin{figure}[H]
 \centering

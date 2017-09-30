@@ -1,5 +1,8 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Configura\c c\~ao de pinos do CI ADE7758}}{12}
-\contentsline {figure}{\numberline {2}{\ignorespaces Detec\c c\~ao de afundamento de tens\~ao}}{12}
-\contentsline {figure}{\numberline {3}{\ignorespaces Detec\c c\~ao da tens\~ao de pico usando o registrador VPEAK}}{13}
-\contentsline {figure}{\numberline {4}{\ignorespaces Detec\c c\~ao de eleva\c c\~ao de tens\~ao}}{14}
+\contentsline {figure}{\numberline {1}{\ignorespaces Interrup\c c\~ao moment\^anea de tens\~ao}}{11}
+\contentsline {figure}{\numberline {2}{\ignorespaces Afundamento instant\^aneo de tens\~ao}}{12}
+\contentsline {figure}{\numberline {3}{\ignorespaces Eleva\c c\~ao instant\^anea de tens\~ao}}{12}
+\contentsline {figure}{\numberline {4}{\ignorespaces Configura\c c\~ao de pinos do CI ADE7758}}{14}
+\contentsline {figure}{\numberline {5}{\ignorespaces Detec\c c\~ao de afundamento de tens\~ao}}{14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Detec\c c\~ao da tens\~ao de pico usando o registrador VPEAK}}{15}
+\contentsline {figure}{\numberline {7}{\ignorespaces Detec\c c\~ao de eleva\c c\~ao de tens\~ao}}{16}
