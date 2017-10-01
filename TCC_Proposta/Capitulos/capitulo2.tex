@@ -28,7 +28,7 @@ Temporários & 3 segundos a 3 minutos \\
  
 \subsection{Interrupção de Tensão (\textit{Interruption})}
 
-A interrupção ocorre quando a amplitude da tensão descresce para um valor menor que 0,1 pu, em um período de até 3 minutos. Algumas de suas principais causas são falhas de equipamento, falhas no sistema de energia e mau funcionamento de controladores \cite{ieee20091159}.
+A interrupção ocorre quando a amplitude da tensão descresce para um valor menor que 0,1 pu, em um período de até 3 minutos. Algumas de suas principais causas são condições de falhas no equipamento, falhas no sistema de energia e mau funcionamento de controladores \cite{ieee20091159}.
 
 A figura \ref{fig:interrupt} ilustra a ocorrência de uma interrupção momentânea, com a tensão caindo para 0 durante aproximadamente 2 segundos. O primeiro gráfico apresenta a variação da tensão eficaz (rms) durante todo o evento, enquanto o segundo apresenta a variação do valor instantâneo da tensão durante o inicio da interrupção.    
 
@@ -41,7 +41,7 @@ A figura \ref{fig:interrupt} ilustra a ocorrência de uma interrupção momentânea,
 
 \subsection{Afundamento de Tensão (\textit{Voltage Sag})}
 
-O afundamento ocorre quando a tensão decai para um valor entre 0,1 e 0,9 pu (tensão remanescente de 0,1 a 0,9 pu). Esse evento é geralmente associado à falhas no sistema, comutação de cargas pesadas e acionamento de grandes motores \cite{ieee20091159}.
+O afundamento ocorre quando a tensão decai para um valor entre 0,1 e 0,9 pu (tensão remanescente de 0,1 a 0,9 pu). Esse evento é geralmente associado à condições de defeito no sistema, comutação de grandes blocos de carga e acionamento de grandes motores \cite{ieee20091159}.
 
 A figura \ref{fig:sag} ilustra um afundamento instantâneo com tensão remanescente de aproximadamente 0,2 pu. No primeiro gráfico, o afundamento é mostrado pela variação da tensão eficaz, com uma escala em segundos. No gráfico abaixo, a forma de onda completa da tensão (com escala em milisegundos) mostra uma oscilação maior do valor durante a duração do evento. 
 
@@ -90,11 +90,13 @@ A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão 
 \end{table}
 
 
-\section{Microcontrolador PIC}
+\section{Microcontrolador PIC32MX795F512L}
+
+Para este trabalho, o microcontrolador PIC32MX795F512L será utilizado através da placa Cerebot MXcK. Fabricado pela empresa \textit{Microship Technology Incorporated}
 
 \section{Circuito Integrado ADE7758}
 
-O ADE7758 é um circuito integrado medidor de energia elétrica trifásica, de alta precisão, com interface serial e duas saídas de pulso fabricado pela empresa \textit{Analog Devices}. \cite{analogdevices:ade7758} 
+O ADE7758, fabricado pela empresa \textit{Analog Devices}, é um circuito integrado medidor de energia elétrica trifásica, de alta precisão, com interface serial e alimentação de 5V. Esse circuito conta com seis entradas analógicas, divididas em dois canais: tensão e corrente. O canal de tensão conta com três entradas: VAP, VBP e VCP.  \cite{analogdevices:ade7758} 
 
 \begin{figure}[H]
 \centering
