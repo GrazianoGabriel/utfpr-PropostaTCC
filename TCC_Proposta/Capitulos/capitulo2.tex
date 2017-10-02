@@ -3,13 +3,14 @@
 \chapter{FUNDAMENTAÇÃO TEÓRICA}  
 \section{Variações de Tensão de Curta Duração}
 Variações de tensão de curta duração (\sigla{VTCD}{Variações de Tensão de Curta Duração}) são desvios significativos no valor eficaz da tensão em curtos intervalos de tempo. 
-Essas variações podem ser momentâneas ou temporárias, tendo como principais causas condições de falta, energização de grandes cargas que demandam correntes altas de partida e conexões frouxas intermitentes nos cabos de energia \cite{aneel2011qualidade} \cite{machado2006detecccao}.
+Essas variações podem ser momentâneas ou temporárias, tendo como principais causas condições de falta, energização de grandes cargas que demandam correntes altas de partida e conexões frouxas intermitentes nos cabos de energia \cite{aneel2011qualidade, machado2006detecccao}.
 
 Usualmente as VTCD referem-se à tensão fase-neutro, podendo ser descritas monofasicamente por dois parâmetros, amplitude e duração. A amplitude, levando-se em consideração um determinado ponto do sistema, é definida pelo valor extremo do valor eficaz da tensão em relação à tensão nominal, enquanto durar o evento \cite{ons2gerenciamento}.
 
 A duração das VTCD é caracterizada pelo tempo percorrido entre o momento em que o valor eficaz da tensão em relação à tensão nominal do sistema ultrapassa um determinado limite e o momento em que volta ao valor anterior \cite{ons2gerenciamento}.
 
-De acordo com a duração de cada evento, as VTCD podem ser classificadas como ilustrado na tabela \ref{tab:tipos}:
+
+Os tipos de variações de tensão de curta duração são definidos de acordo com a tabela \ref{tab:tipos}:
 
 \begin{table}[H]
 \centering
@@ -92,7 +93,11 @@ A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão 
 
 \section{Microcontrolador PIC32MX795F512L}
 
-Para este trabalho, o microcontrolador PIC32MX795F512L será utilizado através da placa Cerebot MXcK. Fabricado pela empresa \textit{Microship Technology Incorporated}
+Para este trabalho será utilizado o microcontrolador PIC32MX795F512L, fabricado pela empresa \textit{Microchip Technology Incorporated}, que possui unidade de processamento de 32 bits, 512 kB de memória Flash, 128 kB de memória RAM, frequência de operação de 80 MHz e faixa de operação de tensão de 2,3 V a 3,6 V \cite{microchip:pic32}.
+
+Outra característica importante desse microcontrolador é a presença de uma interface de controle de acesso ethernet MAC de 10/100 Mbps \cite{microchip:pic32} que, em conjunto com o relógio e calendário em tempo real, permitirão configurar o dispositivo para funcionar como um servidor, salvando as informações de tipo, duração e hora das ocorrências de eventos na tensão e disponibilizando essa informação para consulta online \cite{cerebot:mx7ck}.
+
+
 
 \section{Circuito Integrado ADE7758}
 
@@ -113,7 +118,7 @@ A função de detecção de afundamento de tensão de linha permite verificar quando 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm, height=8cm,keepaspectratio]{./Figuras/SagDetec.png}
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/SagDetec.png}
 \caption{Detecção de afundamento de tensão}
 \label{fig:SagDetec} \fonte{\cite{analogdevices:ade7758}}
 \end{figure} 	
@@ -130,7 +135,7 @@ A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm, height=8cm,keepaspectratio]{./Figuras/VPEAK.png}
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/VPEAK.png}
 \caption{Detecção da tensão de pico usando o registrador VPEAK}
 \label{fig:VPEAK} \fonte{\cite{analogdevices:ade7758}}
 \end{figure} 
@@ -141,7 +146,7 @@ Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sob
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm, height=8cm,keepaspectratio]{./Figuras/SwellDetec.png}
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/SwellDetec.png}
 \caption{Detecção de elevação de tensão}
 \label{fig:SwellDetec} \fonte{\cite{analogdevices:ade7758}}
 \end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  30 SEP 2017 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  2 OCT 2017 19:12
 entering extended mode
 **./modelo_utfpr.tex
 (modelo_utfpr.tex
@@ -554,7 +554,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  (Capitulos/capitulo1.tex
 Cap\'{\i }tulo 1.
 
-Overfull \hbox (1.21948pt too wide) in paragraph at lines 22--25
+Overfull \hbox (1.21948pt too wide) in paragraph at lines 21--24
 \OT1/ptm/m/n/12 de tens[]ao de curta dura[][]ao em re-des de distribui[][]ao de
  ener-gia el[]etrica, man-tendo as informa[][]oes
  []
@@ -569,11 +569,11 @@ Overfull \hbox (1.21948pt too wide) in paragraph at lines 22--25
  (Capitulos/capitulo2.tex
 Cap\'{\i }tulo 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
 [10
 
 
@@ -582,52 +582,47 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 File: ./Figuras/Interrupt.png Graphic file (type png)
 
 <use ./Figuras/Interrupt.png>
-Package pdftex.def Info: ./Figuras/Interrupt.png used on input line 37.
+Package pdftex.def Info: ./Figuras/Interrupt.png used on input line 38.
 (pdftex.def)             Requested size: 227.61678pt x 165.05887pt.
-
-Overfull \hbox (6.90758pt too wide) in paragraph at lines 44--45
-\OT1/ptm/m/n/12 re-ma-nes-cente de 0,1 a 0,9 pu). Esse evento []e ge-ral-mente 
-as-so-ci-ado []a fa-lhas no sis-tema, comuta[][]ao
- []
 
 <./Figuras/sag.png, id=40, 693.59125pt x 490.83376pt>
 File: ./Figuras/sag.png Graphic file (type png)
  <use ./Figuras/sag.png>
-Package pdftex.def Info: ./Figuras/sag.png used on input line 50.
+Package pdftex.def Info: ./Figuras/sag.png used on input line 51.
 (pdftex.def)             Requested size: 227.61581pt x 161.07689pt.
 
 [11 <./Figuras/Interrupt.png>]
 <./Figuras/swell.png, id=44, 943.525pt x 628.3475pt>
 File: ./Figuras/swell.png Graphic file (type png)
  <use ./Figuras/swell.png>
-Package pdftex.def Info: ./Figuras/swell.png used on input line 63.
+Package pdftex.def Info: ./Figuras/swell.png used on input line 64.
 (pdftex.def)             Requested size: 227.61678pt x 151.58308pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
 []|\OT1/ptm/b/n/12 Dura[][]ao da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
 []|\OT1/ptm/b/n/12 Amplitude da
  []
 
-[12 <./Figuras/sag.png> <./Figuras/swell.png>]
-<./Figuras/ADE7758.png, id=49, 532.99126pt x 541.02126pt>
+[12 <./Figuras/sag.png> <./Figuras/swell.png>] [13]
+<./Figuras/ADE7758.png, id=52, 532.99126pt x 541.02126pt>
 File: ./Figuras/ADE7758.png Graphic file (type png)
 
 <use ./Figuras/ADE7758.png>
-Package pdftex.def Info: ./Figuras/ADE7758.png used on input line 101.
+Package pdftex.def Info: ./Figuras/ADE7758.png used on input line 108.
 (pdftex.def)             Requested size: 168.17778pt x 170.71153pt.
- [13]
+
 <./Figuras/SagDetec.png, id=53, 651.43375pt x 537.00626pt>
 File: ./Figuras/SagDetec.png Graphic file (type png)
 
 <use ./Figuras/SagDetec.png>
-Package pdftex.def Info: ./Figuras/SagDetec.png used on input line 114.
-(pdftex.def)             Requested size: 227.61755pt x 187.63544pt.
+Package pdftex.def Info: ./Figuras/SagDetec.png used on input line 121.
+(pdftex.def)             Requested size: 207.09132pt x 170.71474pt.
 
-Overfull \hbox (17.92339pt too wide) in paragraph at lines 119--120
+Overfull \hbox (17.92339pt too wide) in paragraph at lines 126--127
 \OT1/ptm/m/n/12 Como o re-gis-tra-dor de ci-clos de afun-da-mento in-dica um li
 -miar de seis ci-clos (SEGCYC[7:0]=0x06),
  []
@@ -636,15 +631,15 @@ Overfull \hbox (17.92339pt too wide) in paragraph at lines 119--120
 <./Figuras/VPEAK.png, id=57, 666.49pt x 500.87125pt>
 File: ./Figuras/VPEAK.png Graphic file (type png)
  <use ./Figuras/VPEAK.png>
-Package pdftex.def Info: ./Figuras/VPEAK.png used on input line 131.
-(pdftex.def)             Requested size: 227.62057pt x 171.05823pt.
+Package pdftex.def Info: ./Figuras/VPEAK.png used on input line 138.
+(pdftex.def)             Requested size: 227.16293pt x 170.71431pt.
 
 <./Figuras/SwellDetec.png, id=58, 829.0975pt x 647.41875pt>
 File: ./Figuras/SwellDetec.png Graphic file (type png)
 
 <use ./Figuras/SwellDetec.png>
-Package pdftex.def Info: ./Figuras/SwellDetec.png used on input line 142.
-(pdftex.def)             Requested size: 227.61667pt x 177.7394pt.
+Package pdftex.def Info: ./Figuras/SwellDetec.png used on input line 149.
+(pdftex.def)             Requested size: 218.62181pt x 170.71556pt.
  [15 <./Figuras/VPEAK.png>]) [16 <./Figuras/SwellDetec.png>]
 \openout2 = `./Capitulos/capitulo3.aux'.
 
@@ -688,18 +683,18 @@ AED: lastpage setting LastPage
 (Capitulos/capitulo3.aux) (Capitulos/capitulo4.aux) (Capitulos/capitulo5.aux)) 
 ) 
 Here is how much of TeX's memory you used:
- 5086 strings out of 493299
- 68613 string characters out of 3136791
- 163344 words of memory out of 3000000
- 8384 multiletter control sequences out of 15000+200000
+ 5096 strings out of 493299
+ 68827 string characters out of 3136791
+ 163548 words of memory out of 3000000
+ 8394 multiletter control sequences out of 15000+200000
  33962 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,16n,45p,632b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,16n,45p,665b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on modelo_utfpr.pdf (20 pages, 425059 bytes).
+Output written on modelo_utfpr.pdf (20 pages, 428202 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -9,7 +9,7 @@
 \abntrefinfo{Analog Devices}{ANALOG DEVICES}{2011}
 {ANALOG DEVICES. \textbf{Poly Phase Multifunction Energy Metering IC with Per
   Phase Information - ADE7758 Datasheet}.
-[S.l.], 2011. Rev. E.}
+United States of America, 2011. Rev. E.}
 
 \bibitem[ANEEL 2011]{aneel2011qualidade}
 \abntrefinfo{ANEEL}{ANEEL}{2011}
@@ -21,18 +21,23 @@
 \abntrefinfo{Association et al.}{ASSOCIATION et al.}{2009}
 {ASSOCIATION, I.~S. et al. \textbf{1159-2009. IEEE Recommended Practice for
   Monitoring Electric Power Quality Industrial and Commercial Applications}.
-  [S.l.]: New York: IEEE Press, 2009.}
+  New York: IEEE Press, 2009.}
 
 \bibitem[Bollen 2002]{bollen2002power}
 \abntrefinfo{Bollen}{BOLLEN}{2002}
 {BOLLEN, M. H.~J. \textbf{Understanding Power Quality Problems - Voltage Sags
-  and Interruptions}. [S.l.]: John Wiley and Sons, 2002.
+  and Interruptions}. United States of America: John Wiley and Sons, 2002.
 ISBN 0-7803-4713-7.}
+
+\bibitem[Diligent Incorporated 2013]{cerebot:mx7ck}
+\abntrefinfo{Diligent Incorporated}{DILIGENT INCORPORATED}{2013}
+{DILIGENT INCORPORATED. \textbf{Cerebot MX7cK Board Reference Manual}.
+United States of America, 2013. Rev B.}
 
 \bibitem[Dugan et al. 2002]{dugan2002electrical}
 \abntrefinfo{Dugan et al.}{DUGAN et al.}{2002}
-{DUGAN, R.~C. et al. \textbf{Electrical power systems quality}. [S.l.]: USA:
-  McGraw-Hill, 2002.}
+{DUGAN, R.~C. et al. \textbf{Electrical power systems quality}. United States
+  of America: McGraw-Hill, 2002.}
 
 \bibitem[MACHADO et al. 2006]{machado2006detecccao}
 \abntrefinfo{MACHADO et al.}{MACHADO et al.}{2006}
@@ -41,6 +46,14 @@ ISBN 0-7803-4713-7.}
   de curta dura{\c{c}}{\~a}o para aplica{\c{c}}{\~a}o em an{\'a}lise de
   p{\'o}s-opera{\c{c}}{\~a}o em sistemas de energia el{\'e}trica.
 Universidade Federal do Par{\'a}, 2006.}
+
+\bibitem[Microchip Technology Incorporated 2011]{microchip:pic32}
+\abntrefinfo{Microchip Technology Incorporated}{MICROCHIP TECHNOLOGY
+  INCORPORATED}{2011}
+{MICROCHIP TECHNOLOGY INCORPORATED. \textbf{PIC32MX5XX/6XX/7XX Family Data
+  Sheet - High-Performance, USB, CAN and Ethernet 32-bit Flash
+  Microcontrollers}.
+United States of America, 2011. Rev. E.}
 
 \bibitem[ONS 2011]{ons2gerenciamento}
 \abntrefinfo{ONS}{ONS}{2011}

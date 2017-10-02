@@ -1,14 +1,14 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}\MakeUppercase {Introdu\c c\~ao}}{8}
-\contentsline {section}{\numberline {1.1}\MakeUppercase {Problema}}{8}
-\contentsline {section}{\numberline {1.2}\MakeUppercase {Justificativa}}{8}
-\contentsline {section}{\numberline {1.3}\MakeUppercase {Objetivos}}{8}
+\contentsline {section}{\numberline {1.1}\MakeUppercase {Problema}}{9}
+\contentsline {section}{\numberline {1.2}\MakeUppercase {Justificativa}}{9}
+\contentsline {section}{\numberline {1.3}\MakeUppercase {Objetivos}}{9}
 \contentsline {chapter}{\numberline {2}\MakeUppercase {FUNDAMENTA\c C\~AO TE\'ORICA}}{10}
 \contentsline {section}{\numberline {2.1}\MakeUppercase {Varia\c c\~oes de Tens\~ao de Curta Dura\c c\~ao}}{10}
 \contentsline {subsection}{\numberline {2.1.1}Interrup\c c\~ao de Tens\~ao (\textit {Interruption})}{10}
 \contentsline {subsection}{\numberline {2.1.2}Afundamento de Tens\~ao (\textit {Voltage Sag})}{11}
 \contentsline {subsection}{\numberline {2.1.3}Eleva\c c\~ao de Tens\~ao (\textit {Voltage Swell})}{12}
-\contentsline {section}{\numberline {2.2}\MakeUppercase {Microcontrolador PIC}}{13}
+\contentsline {section}{\numberline {2.2}\MakeUppercase {Microcontrolador PIC32MX795F512L}}{13}
 \contentsline {section}{\numberline {2.3}\MakeUppercase {Circuito Integrado ADE7758}}{13}
 \contentsline {subsection}{\numberline {2.3.1}Detec\c c\~ao de afundamento de tens\~ao de linha}{14}
 \contentsline {subsection}{\numberline {2.3.2}Detec\c c\~ao de tens\~ao de pico}{15}
