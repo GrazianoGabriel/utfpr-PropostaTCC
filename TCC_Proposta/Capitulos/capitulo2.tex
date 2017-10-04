@@ -1,16 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CAPÍTULO 2
 \chapter{FUNDAMENTAÇÃO TEÓRICA}  
+
+
 \section{Variações de Tensão de Curta Duração}
 Variações de tensão de curta duração (\sigla{VTCD}{Variações de Tensão de Curta Duração}) são desvios significativos no valor eficaz da tensão em curtos intervalos de tempo. 
 Essas variações podem ser momentâneas ou temporárias, tendo como principais causas condições de falta, energização de grandes cargas que demandam correntes altas de partida e conexões frouxas intermitentes nos cabos de energia \cite{aneel2011qualidade, machado2006detecccao}.
 
-Usualmente as VTCD referem-se à tensão fase-neutro, podendo ser descritas monofasicamente por dois parâmetros, amplitude e duração. A amplitude, levando-se em consideração um determinado ponto do sistema, é definida pelo valor extremo do valor eficaz da tensão em relação à tensão nominal, enquanto durar o evento \cite{ons2gerenciamento}.
+Usualmente as VTCD referem-se à tensão fase-neutro, podendo ser descritas monofasicamente por dois parâmetros: amplitude e duração. A amplitude é definida pelo valor extremo do valor eficaz da tensão (também chamado de tensão remanescente) em relação à tensão nominal, no ponto de observação e enquanto durar o evento. Esse valor pode ser expresso em porcentagem ou em valor por unidade (pu) \cite{ons2gerenciamento}.
 
-A duração das VTCD é caracterizada pelo tempo percorrido entre o momento em que o valor eficaz da tensão em relação à tensão nominal do sistema ultrapassa um determinado limite e o momento em que volta ao valor anterior \cite{ons2gerenciamento}.
+A duração das VTCD é caracterizada pelo tempo percorrido entre o momento em que o valor eficaz da tensão ultrapassa um determinado limiar e o momento em que volta a cruzar esse ponto, podendo ser expresso em segundos ou ciclos \cite{ons2gerenciamento}.
 
 
-Os tipos de variações de tensão de curta duração são definidos de acordo com a tabela \ref{tab:tipos}:
+Na tabela \ref{tab:tipos} é mostrada uma classificação geral dos tipos de variações de tensão de curta duração, e na tabela \ref{tab:VTCD} são apresentados os critérios detalhados para a definição de cada tipo de variação de acordo com a norma vigente da ONS \cite{ons2gerenciamento}.
 
 \begin{table}[H]
 \centering
@@ -22,14 +24,25 @@ Os tipos de variações de tensão de curta duração são definidos de acordo com a t
 \textbf{Tipo} & \textbf{Duração} \\ \hline
 Instantâneos & 0.5 a 30 ciclos \\ \hline
 Momentâneos & 30 ciclos a 3 segundos \\ \hline
-Temporários & 3 segundos a 3 minutos \\ 
+Temporários & 3 segundos a 1 minuto \\ 
 \hline
 \end{tabular}}
 \end{table}
+
+\subsection{Valor Eficaz da Tensão}
+
+Na definição da amplitude das variações de tensão é utilizado o valor eficaz (rms, da sigla em inglês \textit{root mean square}), também chamado de valor quadrático médio, que é uma medida estatística da magnitude de uma quantidade variável. 
+
+O valor eficaz da tensão (Vref) é representado pela equação \ref{eq:1}, sendo $x(t)$ o sinal variável no tempo e $T$ seu período.
+
+\begin{equation}
+\label{eq:1}
+Vref = \sqrt{\frac{1}{T}\int_0^T [x(t)]^2 dt}
+\end{equation}
  
 \subsection{Interrupção de Tensão (\textit{Interruption})}
 
-A interrupção ocorre quando a amplitude da tensão descresce para um valor menor que 0,1 pu, em um período de até 3 minutos. Algumas de suas principais causas são condições de falhas no equipamento, falhas no sistema de energia e mau funcionamento de controladores \cite{ieee20091159}.
+A interrupção ocorre quando a amplitude da tensão descresce para um valor menor que 0,1 pu, em um período de até 1 minuto. Algumas de suas principais causas são condições de falhas no equipamento, falhas no sistema de energia e mau funcionamento de controladores \cite{ieee20091159}.
 
 A figura \ref{fig:interrupt} ilustra a ocorrência de uma interrupção momentânea, com a tensão caindo para 0 durante aproximadamente 2 segundos. O primeiro gráfico apresenta a variação da tensão eficaz (rms) durante todo o evento, enquanto o segundo apresenta a variação do valor instantâneo da tensão durante o inicio da interrupção.    
 
@@ -81,11 +94,11 @@ A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão 
     \multicolumn{1}{ |c  }{}             &
     \multicolumn{1}{ |c| }{Elevação Momentânea de Tensão} & Superior ou igual a um ciclo e inferior ou igual a três segundos & Superior a 1,1 p.u   \\ \cline{1-4}
     \multicolumn{1}{ |c  }{\multirow{2}{*}{Variação Temporária de Tensão}} &
-    \multicolumn{1}{ |c| }{Interrupção Temporária de Tensão} & Superior a três segundos e inferior a três minutos & Inferior a 0,1 p.u \\ \cline{2-4}
+    \multicolumn{1}{ |c| }{Interrupção Temporária de Tensão} & Superior a três segundos e inferior a um minuto & Inferior a 0,1 p.u \\ \cline{2-4}
     \multicolumn{1}{ |c  }{}             &
-    \multicolumn{1}{ |c| }{Afundamento Temporário de Tensão} & Superior a três segundos e inferior a três minutos & Superior ou igual a 0,1 e inferior a 0,9 p.u \\ \cline{2-4}
+    \multicolumn{1}{ |c| }{Afundamento Temporário de Tensão} & Superior a três segundos e inferior a um minuto & Superior ou igual a 0,1 e inferior a 0,9 p.u \\ \cline{2-4}
     \multicolumn{1}{ |c  }{}             &
-    \multicolumn{1}{ |c| }{Elevação Temporária de Tensão} & Superior a três segundos e inferior a três minutos & Superior a 1,1 p.u \\ 
+    \multicolumn{1}{ |c| }{Elevação Temporária de Tensão} & Superior a três segundos e inferior a um minuto & Superior a 1,1 p.u \\ 
     \hline
 	\end{tabular}}
 \end{table}
@@ -95,8 +108,18 @@ A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão 
 
 Para este trabalho será utilizado o microcontrolador PIC32MX795F512L, fabricado pela empresa \textit{Microchip Technology Incorporated}, que possui unidade de processamento de 32 bits, 512 kB de memória Flash, 128 kB de memória RAM, frequência de operação de 80 MHz e faixa de operação de tensão de 2,3 V a 3,6 V \cite{microchip:pic32}.
 
-Outra característica importante desse microcontrolador é a presença de uma interface de controle de acesso ethernet MAC de 10/100 Mbps \cite{microchip:pic32} que, em conjunto com o relógio e calendário em tempo real, permitirão configurar o dispositivo para funcionar como um servidor, salvando as informações de tipo, duração e hora das ocorrências de eventos na tensão e disponibilizando essa informação para consulta online \cite{cerebot:mx7ck}.
+Outra característica importante desse microcontrolador é a presença de uma interface de controle de acesso ethernet (MAC) de 10/100 Mbps \cite{microchip:pic32} que, em conjunto com o periférico relógio em tempo real (também presente no microcontrolador), permitirão configurar o dispositivo para funcionar como um servidor, salvando as informações de tipo, duração e hora das ocorrências de eventos na tensão e disponibilizando-as para consulta online 
 
+O microcontrolador PIC32MX795F512L será utilizado através da placa de desenvolvimento Cerebot MX7cK, que é fabricada pela empresa \textit{Digilent Incorporated}. Essa placa possui 52 pinos de entrada e saída, interface Ethernet 10/100, 5 entradas de interrupção externa e diversos outros periféricos, podendo ser alimentada via USB ou fonte AC-DC externa. \cite{cerebot:mx7ck}.
+
+Um diagrama com os principais periféricos da Cerebot MX7cK é apresentado na figura \ref{fig:cerebot}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/cerebotDiagram.png}
+\caption{Diagrama do circuito da placa de desenvolvimento Cerebot MX7cK}
+\label{fig:cerebot} \fonte{\cite{cerebot:mx7ck}}
+\end{figure}
 
 
 \section{Circuito Integrado ADE7758}
@@ -129,7 +152,7 @@ A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão de linha c
 
 \subsection{Detecção de tensão de pico} %Pag 26 datasheet
 
-O \sigla{CI}{Circuito Integrado} ADE7758 possui o registrador VPEAK, que armazena o valor absoluto de pico da forma de onda da tensão, dentro de um número fixo de meio ciclos. Além disso, multiplas fases podem ser ativadas para essa detecção simultânea através da configuração dos bits de PEAKSEL[2:4], no registrador MMODE. Esses bits podem selecionar fase para medição da tensão e da corrente. \cite{analogdevices:ade7758}
+O circuito Integrado ADE7758 possui o registrador VPEAK, que armazena o valor absoluto de pico da forma de onda da tensão, dentro de um número fixo de meio ciclos. Além disso, multiplas fases podem ser ativadas para essa detecção simultânea através da configuração dos bits de PEAKSEL[2:4], no registrador MMODE. Esses bits podem selecionar fase para medição da tensão e da corrente. \cite{analogdevices:ade7758}
 
 A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão de pico.
 
