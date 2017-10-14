@@ -30,6 +30,7 @@ Temporários & 3 segundos a 1 minuto \\
 \end{table}
 
 \subsection{Valor Eficaz da Tensão}
+\label{sec:rms}
 
 Na definição da amplitude das variações de tensão é utilizado o valor eficaz (rms, da sigla em inglês \textit{root mean square}), também chamado de valor quadrático médio, que é uma medida estatística da magnitude de uma quantidade variável. 
 
@@ -108,7 +109,9 @@ A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão 
 
 Para este trabalho será utilizado o microcontrolador PIC32MX795F512L, fabricado pela empresa \textit{Microchip Technology Incorporated}, que possui unidade de processamento de 32 bits, 512 kB de memória Flash, 128 kB de memória RAM, frequência de operação de 80 MHz e faixa de operação de tensão de 2,3 V a 3,6 V \cite{microchip:pic32}.
 
-Outra característica importante desse microcontrolador é a presença de uma interface de controle de acesso ethernet (MAC) de 10/100 Mbps \cite{microchip:pic32} que, em conjunto com o periférico relógio em tempo real (também presente no microcontrolador), permitirão configurar o dispositivo para funcionar como um servidor, salvando as informações de tipo, duração e hora das ocorrências de eventos na tensão e disponibilizando-as para consulta online 
+O PIC32MX795F512L conta também com 5 Timers de 16 bits, sendo que dois pares podem ser combinados para formar dois Timers de 32 bits \cite{microchip:pic32}. Será explicado na seção 3 como esses Timers serão utilizados no trabalho.
+
+Outra característica importante desse microcontrolador é a presença de uma interface de controle de acesso ethernet (MAC) de 10/100 Mbps \cite{microchip:pic32} que, em conjunto com o periférico relógio em tempo real (também presente no microcontrolador), permitirá configurar o dispositivo para funcionar como um servidor, salvando as informações de tipo, duração e hora das ocorrências de variações na tensão e disponibilizando-as para consulta online.
 
 O microcontrolador PIC32MX795F512L será utilizado através da placa de desenvolvimento Cerebot MX7cK, que é fabricada pela empresa \textit{Digilent Incorporated}. Essa placa possui 52 pinos de entrada e saída, interface Ethernet 10/100, 5 entradas de interrupção externa e diversos outros periféricos, podendo ser alimentada via USB ou fonte AC-DC externa. \cite{cerebot:mx7ck}.
 
@@ -129,15 +132,16 @@ O ADE7758, fabricado pela empresa \textit{Analog Devices}, é um circuito integra
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/ADE7758.png}
-\caption{Configuração de pinos do CI ADE7758}
+\caption{Configuração de pinos do circuito integrado ADE7758}
 \label{fig:ade7758} \fonte{\cite{analogdevices:ade7758}}
 \end{figure}
 
 Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis, descritas abaixo.
 
 \subsection{Detecção de afundamento de tensão de linha}
+\label{sec:sag}
 
-A função de detecção de afundamento de tensão de linha permite verificar quando o valor absoluto de qualquer uma das fases da tensão cair abaixo de um certo valor predeterminado, durante um número de meio ciclos.
+O ADE7758 pode ser programado para detectar uma diminuição no valor absoluto da tensão de linha, abaixo de um limiar configurado no registrador de nível de afundamento (\textit{Sag level register}), por um número de meio ciclos.  
 
 \begin{figure}[H]
 \centering
@@ -146,13 +150,13 @@ A função de detecção de afundamento de tensão de linha permite verificar quando 
 \label{fig:SagDetec} \fonte{\cite{analogdevices:ade7758}}
 \end{figure} 	
 
-A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão de linha cai abaixo de um limiar definido no registrador de nível de afundamento (SAGLVL[7:0]) durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo quando o SAG flag da fase correspondente no interrupt status register (Bit 1 até Bit 3 no interrupt status register) \cite{analogdevices:ade7758}. %Pag 25 datasheet
+A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaixo de um limiar definido no registrador de nível de afundamento (SAGLVL[7:0]), durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis meio ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo, quando a flag que indica o afundamento é colocada em nível lógico alto para a fase de tensão correspondente (Bits 1 até 3 no registrador da interrupção)  \cite{analogdevices:ade7758}. %Pag 25 datasheet
 
 %SAG LEVEL SET
 
-\subsection{Detecção de tensão de pico} %Pag 26 datasheet
+\subsection{Detecção de tensão de pico} %Pag 26 datasheet 
 
-O circuito Integrado ADE7758 possui o registrador VPEAK, que armazena o valor absoluto de pico da forma de onda da tensão, dentro de um número fixo de meio ciclos. Além disso, multiplas fases podem ser ativadas para essa detecção simultânea através da configuração dos bits de PEAKSEL[2:4], no registrador MMODE. Esses bits podem selecionar fase para medição da tensão e da corrente. \cite{analogdevices:ade7758}
+O circuito Integrado ADE7758 pode também ser configurado para fazer a detecção de eventos de elevação de tensão. O valor absoluto de pico da forma de onda da tensão, dentro de um número fixo de meio ciclos. Além disso, multiplas fases podem ser ativadas para essa detecção simultânea através da configuração dos bits de PEAKSEL[2:4], no registrador MMODE. Esses bits podem selecionar fase para medição da tensão e da corrente. \cite{analogdevices:ade7758}
 
 A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão de pico.
 
@@ -163,7 +167,8 @@ A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão 
 \label{fig:VPEAK} \fonte{\cite{analogdevices:ade7758}}
 \end{figure} 
 
-\subsection{Interrupção de Detecção de Sobretensão}
+\subsection{Detecção de Sobretensão}
+\label{sec:swell}
 
 Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sobretensão, quando o valor absoluto da tensão excede um limiar configurado no registrador VPINTLVL[7:0]. O Bit 14 (\textit{PKV flag}) do registrador de interrupção é responsável por gravar a ocorrência da sobretensão. Assim como na detecção de tensão de pico, multiplas fases de tensão e corrente podem ser monitoradas individualmente a partir da configuração dos bits PKIRQSEL[5:7] do registrador MMODE \cite{analogdevices:ade7758}. 	
 
@@ -173,3 +178,17 @@ Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sob
 \caption{Detecção de elevação de tensão}
 \label{fig:SwellDetec} \fonte{\cite{analogdevices:ade7758}}
 \end{figure}
+
+\subsection{Medição de Frequência}
+
+Com o circuito integrado ADE7758 é possível fazer a medição da frequência e do período da tensão. A fase que será analisada é selecionada no Bit 0 e Bit 1 do registrador MMODE, sendo que o registrador do período é o registrador FREQ, de 12 Bits \cite{analogdevices:ade7758}.
+
+O Bit 7 do LCYCMODE seleciona se o registrador do período irá mostrar a frequência ou o período. Por padrão esse Bit é configurado em nível lógico baixo, com o registrador mostrando a medição da frequência. Caso o Bit seja configurado em nível lógico alto, o registrador irá mostrar o período.
+
+\subsection{Medição de Tensão RMS}
+\label{sec:rmsade}
+
+Foi apresentado na seção \ref{sec:rms} o conceito de valor eficaz da tensão. O circuito integrado ADE7758 é capaz de calcular esse valor para cada uma das seis entradas analógicas, mantendo os resultados em diferentes registradores.
+
+Os valores de tensão eficaz são salvos em registradores de 24 bits: AVRMS, BVRMS e CVRMS. 
+
