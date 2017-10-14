@@ -154,19 +154,6 @@ A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaix
 
 %SAG LEVEL SET
 
-\subsection{Detecção de tensão de pico} %Pag 26 datasheet 
-
-O circuito Integrado ADE7758 pode também ser configurado para fazer a detecção de eventos de elevação de tensão. O valor absoluto de pico da forma de onda da tensão, dentro de um número fixo de meio ciclos. Além disso, multiplas fases podem ser ativadas para essa detecção simultânea através da configuração dos bits de PEAKSEL[2:4], no registrador MMODE. Esses bits podem selecionar fase para medição da tensão e da corrente. \cite{analogdevices:ade7758}
-
-A figura \ref{fig:VPEAK} ilustra o comportamento temporal da detecção da tensão de pico.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/VPEAK.png}
-\caption{Detecção da tensão de pico usando o registrador VPEAK}
-\label{fig:VPEAK} \fonte{\cite{analogdevices:ade7758}}
-\end{figure} 
-
 \subsection{Detecção de Sobretensão}
 \label{sec:swell}
 

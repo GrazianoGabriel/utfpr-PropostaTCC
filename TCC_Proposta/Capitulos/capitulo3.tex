@@ -1,16 +1,43 @@
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% CAPÍTULO 3
-	\chapter{METODOLOGIA}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAPÍTULO 3
+\chapter{METODOLOGIA}  
 	
-\section{Trabalho Proposto}
-
 Como mencionado na seção \ref{sec:objetivo}, o objetivo deste trabalho é o desenvolvimento de um sistema de detecção de variações de tensão de curta duração. Esse sistema deverá analisar o sinal de onda da tensão proveniente da rede de distribuição de energia elétrica, detectar a ocorrência de variações, classifica-las de acordo com as normas vigentes, salvar essa informação (incluindo data e hora da ocorrência) e disponibiliza-la online para consulta.
-	
-Para isso, duas abordagens diferentes serão propostas neste capítulo. 
 
-\subsection{Abordagem 1}
+\section{Etapas do Trabalho}
 
-A primeira abordagem proposta envolve a utilização das funções de detecção de afundamento e de sobretensão do circuito integrado ADE7758, descritas nas seções \ref{sec:sag} e \ref{sec:swell}, além dos timers e demais periféricos do microcontrolador PIC32MX795F512L.
+O trabalho de conclusão de curso será organizado de acordo com as seguintes etapas:
+
+\begin{itemize}
+\item Revisão bibliográfica
+\item Definição e estudo das tecnologias
+\item Aplicação dos conceitos teóricos
+\item Análise e validação dos resultados
+\item Elaboração da monografia
+\end{itemize}
+
+\subsection{Revisão Bibliográfica}
+
+A primeira etapa será dedicada à busca por referências bibliográficas que tenham relação com o estudo de variações de tensão de curta duração e demais áreas abordadas no trabalho. O objetivo aqui é estudar o que já foi feito na área, quais são as principais técnicas existes para a detecção desse tipo de evento e como este trabalho poderá contribuir com o assunto.
+
+\subsection{Definição e estudo das tecnologias}
+
+Nesta etapa, o objetivo é o estudo prático do funcionamento dos materias que serão utilizados no trabalho, descritos no capítulo 2. Serão feitos testes com o microcontrolador PIC32MX795F512L (através da placa de desenvolvimento Cerebot MX7cK) e com o circuito integrado ADE7758, visando conhecer melhor suas características, funcionamento e métodos de comunicação entre os dois dispositivos.
+
+Além disso, será feito um estudo quanto a configuração do microcontrolador PIC32MX795F512L como um servidor TCP/IP, com a realização de testes para sua correta operação.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/cerebot.png}
+\caption{Placa de desenvolvimento Cerebot MX7cK}
+\label{fig:cerebot} \fonte{\cite{cerebot:mx7ck}}
+\end{figure}
+
+\subsection{Aplicação dos conceitos teóricos}
+
+Após o estudo dos materiais que serão utilizados no projeto, a etapa de aplicação dos conceitos teóricos terá como objetivo o desenvolvimento do \textit{firmware} do sistema. Para isso, todas as normas e restrições descritas no capítulo 2 deverão ser levadas em conta para a correta detecção dos eventos de VTCD.  
+
+Duas abordagens diferentes serão testadas no projeto. A primeira proposta envolve a utilização das funções de detecção de afundamento e de sobretensão do circuito integrado ADE7758, descritas nas seções \ref{sec:sag} e \ref{sec:swell}, além dos timers e demais periféricos do microcontrolador PIC32MX795F512L.
 
 Para a detecção da ocorrência de afundamento de tensão, o registrador SAGLVL[7:0] deverá ser configurado de acordo com os valores da tabela \ref{tab:VTCD}, ativando a interrupção quando o valor da tensão ficar abaixo de 0.9 pu por um período maior que um ciclo.
 
@@ -18,32 +45,19 @@ Essa interrupção irá ativar o timer presente no microcontrolador PIC32MX795F512L
 
 No caso da elevação de tensão, a detecção será feita através da configuração do limite superior no registrador VPINTLVL[7:0]. Caso a tensão proveninente da rede elétrica ultrapasse esse valor, o Bit 14 do registrador de interrupção é acionado para registrar a ocorrência da sobretensão. O timer do microcontrolador também será acionado, calculando o tempo total do evento e enquadrando-o em uma das categorias de VTCD.
 
-\subsection{Abordagem 2}
-
-Outro método para o desenvolvimento do sistema seria a utilização da medição da tensão eficaz, função do ADE7758 descrita na seção \ref{sec:rmsade}. A tensão proveniente da rede elétrica terá seu valor RMS constantemente monitorado pelo circuito integrado. O resultado dessa medição deve ser comparado com limites pré-configurados, de acordo com a tabela \ref{tab:VTCD}, enquadrando a ocorrência de variação da tensão como interrupção, afundamento ou elevação. 
+A segunda abordagem proposta para o desenvolvimento do sistema é a utilização da medição da tensão eficaz, função do ADE7758 descrita na seção \ref{sec:rmsade}. A tensão proveniente da rede elétrica terá seu valor RMS constantemente monitorado pelo circuito integrado. O resultado dessa medição deve ser comparado com limites pré-configurados, de acordo com a tabela \ref{tab:VTCD}, enquadrando a ocorrência de variação da tensão como interrupção, afundamento ou elevação. 
 
 O timer presente no microcontrolador PIC32MX795F512L será acionado no início do evento, contando a duração de total e, de acordo com o valor medido, enquandrando o evento de VTCD como momentâneo ou temporário. 
 
-\section{Etapas do Trabalho}
+\subsection{Análise e validação dos resultados}
 
-O trabalho de conclusão de curso será organizado de acordo com as seguintes etapas:
+Após o desenvolvimento do hardware e da programação do sistema, levando em conta as duas abordagens propostas anteriormente, a etapa de análise e validação dos resultados terá como objetivo principal testar cada um dos métodos e analisar com deles será o mais eficiente para a solução do problema.
 
-\begin{itemize}
-\item Revisão Bibliográfica
-\item Definição e estudo das tecnologias
-\item Aplicação dos conceitos teóricos
-\end{itemize}
+Utilizando os laboratórios da UTFPR e um Variac, serão realizados ensaios simulando os diversos tipos de variações de tensão de curta duração na rede elétrica. Cada um dos métodos será testado e analisado de acordo com tempo de resposta, gasto de energia e eficiência na detecção dos eventos. 
 
-\subsection{Revisão Bibliográfica}
+\subsection{Elaboração da monografia}    
 
-A primeira etapa será dedicada à busca por referências bibliog?aficas que tenham relação com o estudo de variações de tensão de curta duração e demais áreas abordadas no trabalho. O objetivo aqui é estudar o que já foi feito na área, quais são as principais técnicas existes para a detecção desse tipo de evento e como esse trabalho poderá contribuir com o assunto.
-
-\subsection{Definição e estudo das tecnologias}
-
-Nesta etapa, o objetivo é o estudo prático do funcionamento dos materias que serão utilizados no trabalho, descritos no capítulo 2. Serão feitos testes com o microcontrolador PIC32MX795F512L (através da placa de desenvolvimente Cerebot MX7cK) e com o circuito integrado ADE7758, visando conhecer melhor suas características, funcionamento e comunicação entre os dois dispositivos. 
-
-\subsection{Aplicação dos conceitos teóricos}
-
+A última etapada do trabalho consiste na elaboração do trabalho de conclusão de curso, de acordo com as normas para elaboração de trabalhos acadêmicos da UTFPR. Serão apresentados todos os passos do desenvolvimento do projeto, assim como uma análise completa dos resultados.
 
 
  
