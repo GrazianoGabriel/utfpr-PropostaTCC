@@ -9,16 +9,16 @@ Como mencionado na seção \ref{sec:objetivo}, o objetivo deste trabalho é o desen
 O trabalho de conclusão de curso será organizado de acordo com as seguintes etapas:
 
 \begin{itemize}
-\item Revisão bibliográfica
-\item Definição e estudo das tecnologias
-\item Aplicação dos conceitos teóricos
-\item Análise e validação dos resultados
-\item Elaboração da monografia
+\item [-] Revisão bibliográfica
+\item [-] Definição e estudo das tecnologias
+\item [-] Aplicação dos conceitos teóricos
+\item [-] Análise e validação dos resultados
+\item [-] Elaboração da monografia
 \end{itemize}
 
 \subsection{Revisão Bibliográfica}
 
-A primeira etapa será dedicada à busca por referências bibliográficas que tenham relação com o estudo de variações de tensão de curta duração e demais áreas abordadas no trabalho. O objetivo aqui é estudar o que já foi feito na área, quais são as principais técnicas existes para a detecção desse tipo de evento e como este trabalho poderá contribuir com o assunto.
+A primeira etapa será dedicada à busca por referências bibliográficas que tenham relação com o estudo de variações de tensão de curta duração. O objetivo aqui é estudar trabalhos existentes na área, assim como as principais técnicas existes para a detecção desse tipo de evento e como este trabalho poderá contribuir com o assunto.
 
 \subsection{Definição e estudo das tecnologias}
 
@@ -39,11 +39,18 @@ Após o estudo dos materiais que serão utilizados no projeto, a etapa de aplicaçã
 
 Duas abordagens diferentes serão testadas no projeto. A primeira proposta envolve a utilização das funções de detecção de afundamento e de sobretensão do circuito integrado ADE7758, descritas nas seções \ref{sec:sag} e \ref{sec:swell}, além dos timers e demais periféricos do microcontrolador PIC32MX795F512L.
 
-Para a detecção da ocorrência de afundamento de tensão, o registrador SAGLVL[7:0] deverá ser configurado de acordo com os valores da tabela \ref{tab:VTCD}, ativando a interrupção quando o valor da tensão ficar abaixo de 0.9 pu por um período maior que um ciclo.
+Para a detecção da ocorrência de afundamento de tensão, o registrador SAGLVL deverá ser configurado de acordo com os valores da tabela \ref{tab:VTCD}, ativando a interrupção quando o valor da tensão ficar abaixo de 0,9 pu por um período maior que um ciclo. Caso o valor da tensão remanescente seja igual ou menor que 0,1 pu, o evento deve ser tratado como uma interrupção de tensão.
 
 Essa interrupção irá ativar o timer presente no microcontrolador PIC32MX795F512L, que irá permanecer ativo durante a duração do evento. De acordo com o valor final da contagem, o evento de afundamento será enquadrado em uma das categorias de VTCD, também seguindo as normas presentes na tabela \ref{tab:VTCD}.
 
-No caso da elevação de tensão, a detecção será feita através da configuração do limite superior no registrador VPINTLVL[7:0]. Caso a tensão proveninente da rede elétrica ultrapasse esse valor, o Bit 14 do registrador de interrupção é acionado para registrar a ocorrência da sobretensão. O timer do microcontrolador também será acionado, calculando o tempo total do evento e enquadrando-o em uma das categorias de VTCD.
+No caso da elevação de tensão, a detecção será feita através da configuração do limite superior no registrador VPINTLVL. Caso a tensão proveninente da rede elétrica ultrapasse esse valor, o Bit 14 do registrador de interrupção é acionado para registrar a ocorrência da sobretensão. O timer do microcontrolador também será acionado, calculando o tempo total do evento e enquadrando-o em uma das categorias de VTCD.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/Fluxograma.png}
+\caption{Funcionamento básico da primeira abordagem proposta}
+\label{fig:abordagem1} \fonte{Autoria própria}
+\end{figure}
 
 A segunda abordagem proposta para o desenvolvimento do sistema é a utilização da medição da tensão eficaz, função do ADE7758 descrita na seção \ref{sec:rmsade}. A tensão proveniente da rede elétrica terá seu valor RMS constantemente monitorado pelo circuito integrado. O resultado dessa medição deve ser comparado com limites pré-configurados, de acordo com a tabela \ref{tab:VTCD}, enquadrando a ocorrência de variação da tensão como interrupção, afundamento ou elevação. 
 
@@ -51,7 +58,7 @@ O timer presente no microcontrolador PIC32MX795F512L será acionado no início do 
 
 \subsection{Análise e validação dos resultados}
 
-Após o desenvolvimento do hardware e da programação do sistema, levando em conta as duas abordagens propostas anteriormente, a etapa de análise e validação dos resultados terá como objetivo principal testar cada um dos métodos e analisar com deles será o mais eficiente para a solução do problema.
+Após o desenvolvimento do hardware e da programação do sistema, levando em conta as duas abordagens propostas anteriormente, a etapa de análise e validação dos resultados terá como objetivo principal testar cada um dos métodos e analisar qual deles será o mais eficiente para a solução do problema.
 
 Utilizando os laboratórios da UTFPR e um Variac, serão realizados ensaios simulando os diversos tipos de variações de tensão de curta duração na rede elétrica. Cada um dos métodos será testado e analisado de acordo com tempo de resposta, gasto de energia e eficiência na detecção dos eventos. 
 

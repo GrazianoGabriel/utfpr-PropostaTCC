@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  14 OCT 2017 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  15 OCT 2017 20:32
 entering extended mode
 **./modelo_utfpr.tex
 (modelo_utfpr.tex
@@ -527,33 +527,24 @@ Underfull \hbox (badness 6220) in paragraph at lines 89--89
 [1] [1
 
 
-] [2
-
-
 ] (modelo_utfpr.lof)
 \tf@lof=\write3
 \openout3 = `modelo_utfpr.lof'.
 
- [3
+ [2
 
 ] (modelo_utfpr.lot)
 \tf@lot=\write4
 \openout4 = `modelo_utfpr.lot'.
 
- [4
-
-] (modelo_utfpr.lsg)
-\tf@lsg=\write5
-\openout5 = `modelo_utfpr.lsg'.
-
-
-[5
+ [3
 
 ] (modelo_utfpr.toc)
-\tf@toc=\write6
-\openout6 = `modelo_utfpr.toc'.
+\tf@toc=\write5
+\openout5 = `modelo_utfpr.toc'.
 
- [6
+
+[4
 
 
 ]
@@ -561,17 +552,17 @@ Underfull \hbox (badness 6220) in paragraph at lines 89--89
 
  (Capitulos/capitulo1.tex
 Cap\'{\i }tulo 1.
+[6
 
+
+
+]
 Overfull \hbox (1.21948pt too wide) in paragraph at lines 22--25
 \OT1/ptm/m/n/12 de tens[]ao de curta dura[][]ao em re-des de distribui[][]ao de
  ener-gia el[]etrica, man-tendo as informa[][]oes
  []
 
-[8
-
-
-
-]) [9]
+) [7]
 \openout2 = `./Capitulos/capitulo2.aux'.
 
  (Capitulos/capitulo2.tex
@@ -582,79 +573,79 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
-[10
 
-
-
-] <./Figuras/Interrupt.png, id=39, 777.90625pt x 564.1075pt>
-File: ./Figuras/Interrupt.png Graphic file (type png)
-
-<use ./Figuras/Interrupt.png>
-Package pdftex.def Info: ./Figuras/Interrupt.png used on input line 52.
-(pdftex.def)             Requested size: 227.61678pt x 165.05887pt.
- [11 <./Figuras/Interrupt.png>]
-<./Figuras/sag.png, id=45, 693.59125pt x 490.83376pt>
-File: ./Figuras/sag.png Graphic file (type png)
- <use ./Figuras/sag.png>
-Package pdftex.def Info: ./Figuras/sag.png used on input line 65.
-(pdftex.def)             Requested size: 227.61581pt x 161.07689pt.
-
-<./Figuras/swell.png, id=46, 943.525pt x 628.3475pt>
-File: ./Figuras/swell.png Graphic file (type png)
- <use ./Figuras/swell.png>
-Package pdftex.def Info: ./Figuras/swell.png used on input line 78.
-(pdftex.def)             Requested size: 227.61678pt x 151.58308pt.
-
-[12 <./Figuras/sag.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\OT1/ptm/b/n/12 Dura[][]ao da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\OT1/ptm/b/n/12 Amplitude da
  []
 
-[13 <./Figuras/swell.png>]
-<./Figuras/cerebotDiagram.png, id=54, 641.39626pt x 466.74374pt>
+[8
+
+
+
+] [9] <./Figuras/Interrupt.png, id=38, 777.90625pt x 564.1075pt>
+File: ./Figuras/Interrupt.png Graphic file (type png)
+
+<use ./Figuras/Interrupt.png>
+Package pdftex.def Info: ./Figuras/Interrupt.png used on input line 78.
+(pdftex.def)             Requested size: 227.61678pt x 165.05887pt.
+
+Overfull \hbox (5.51508pt too wide) in paragraph at lines 85--86
+\OT1/ptm/m/n/12 re-ma-nes-cente). Esse evento []e ge-ral-mente as-so-ci-ado a c
+ondi[][]oes de de-feito no sis-tema, comuta[][]ao
+ []
+
+<./Figuras/sag.png, id=39, 693.59125pt x 490.83376pt>
+File: ./Figuras/sag.png Graphic file (type png)
+ <use ./Figuras/sag.png>
+Package pdftex.def Info: ./Figuras/sag.png used on input line 91.
+(pdftex.def)             Requested size: 227.61581pt x 161.07689pt.
+
+[10 <./Figuras/Interrupt.png>]
+<./Figuras/swell.png, id=43, 943.525pt x 628.3475pt>
+File: ./Figuras/swell.png Graphic file (type png)
+ <use ./Figuras/swell.png>
+Package pdftex.def Info: ./Figuras/swell.png used on input line 104.
+(pdftex.def)             Requested size: 227.61678pt x 151.58308pt.
+
+[11 <./Figuras/sag.png> <./Figuras/swell.png>]
+<./Figuras/cerebotDiagram.png, id=47, 641.39626pt x 466.74374pt>
 File: ./Figuras/cerebotDiagram.png Graphic file (type png)
 
 <use ./Figuras/cerebotDiagram.png>
-Package pdftex.def Info: ./Figuras/cerebotDiagram.png used on input line 122.
+Package pdftex.def Info: ./Figuras/cerebotDiagram.png used on input line 123.
 (pdftex.def)             Requested size: 227.61407pt x 165.63464pt.
- [14 <./Figuras/cerebotDiagram.png>]
-<./Figuras/ADE7758.png, id=58, 532.99126pt x 541.02126pt>
+ [12]
+<./Figuras/ADE7758.png, id=52, 532.99126pt x 541.02126pt>
 File: ./Figuras/ADE7758.png Graphic file (type png)
 
 <use ./Figuras/ADE7758.png>
-Package pdftex.def Info: ./Figuras/ADE7758.png used on input line 134.
+Package pdftex.def Info: ./Figuras/ADE7758.png used on input line 135.
 (pdftex.def)             Requested size: 168.17778pt x 170.71153pt.
-
-<./Figuras/SagDetec.png, id=59, 625.33624pt x 443.6575pt>
+ [13 <./Figuras/cerebotDiagram.png> <./Figuras/ADE7758.png>] <./Figuras/SagDete
+c.png, id=56, 625.33624pt x 443.6575pt>
 File: ./Figuras/SagDetec.png Graphic file (type png)
 
 <use ./Figuras/SagDetec.png>
-Package pdftex.def Info: ./Figuras/SagDetec.png used on input line 148.
+Package pdftex.def Info: ./Figuras/SagDetec.png used on input line 149.
 (pdftex.def)             Requested size: 227.62083pt x 161.49022pt.
- [15 <./Figuras/ADE7758.png>]
-<./Figuras/SwellDetec.png, id=63, 805.0075pt x 569.12625pt>
+
+<./Figuras/SwellDetec.png, id=57, 805.0075pt x 569.12625pt>
 File: ./Figuras/SwellDetec.png Graphic file (type png)
 
 <use ./Figuras/SwellDetec.png>
-Package pdftex.def Info: ./Figuras/SwellDetec.png used on input line 164.
+Package pdftex.def Info: ./Figuras/SwellDetec.png used on input line 163.
 (pdftex.def)             Requested size: 227.61157pt x 160.9174pt.
- [16 <./Figuras/SagDetec.png>]) [17 <./Figuras/SwellDetec.png>]
+ [14 <./Figuras/SagDetec.png>]) [15 <./Figuras/SwellDetec.png>]
 \openout2 = `./Capitulos/capitulo3.aux'.
 
  (Capitulos/capitulo3.tex
 Cap\'{\i }tulo 3.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 12.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
- [18
+[16
 
 
 
@@ -664,13 +655,20 @@ Overfull \hbox (50.27147pt too wide) in paragraph at lines 27--28
 o do mi-cro-con-tro-la-dor PIC32MX795F512L
  []
 
-<./Figuras/cerebot.png, id=75, 711.65875pt x 570.13pt>
+<./Figuras/cerebot.png, id=67, 711.65875pt x 570.13pt>
 File: ./Figuras/cerebot.png Graphic file (type png)
 
 <use ./Figuras/cerebot.png>
 Package pdftex.def Info: ./Figuras/cerebot.png used on input line 31.
 (pdftex.def)             Requested size: 213.08662pt x 170.70973pt.
- [19 <./Figuras/cerebot.png>] [20]) [21]
+ [17 <./Figuras/cerebot.png>]
+<./Figuras/Fluxograma.png, id=71, 744.7825pt x 690.58pt>
+File: ./Figuras/Fluxograma.png Graphic file (type png)
+
+<use ./Figuras/Fluxograma.png>
+Package pdftex.def Info: ./Figuras/Fluxograma.png used on input line 50.
+(pdftex.def)             Requested size: 184.11546pt x 170.71623pt.
+ [18 <./Figuras/Fluxograma.png>]) [19]
 \openout2 = `./Capitulos/capitulo4.aux'.
 
 
@@ -681,7 +679,7 @@ Overfull \hbox (3.53069pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
-) [22
+) [20
 
 
 
@@ -691,7 +689,7 @@ Overfull \hbox (3.53069pt too wide) in paragraph at lines 21--22
  (Capitulos/capitulo5.tex) (modelo_utfpr.bbl)
 
 AED: lastpage setting LastPage
-[23
+[21
 
 
 
@@ -708,22 +706,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5137 strings out of 493299
- 69419 string characters out of 3136791
- 161657 words of memory out of 3000000
- 8419 multiletter control sequences out of 15000+200000
- 38849 words of font info for 89 fonts, out of 3000000 for 9000
+ 5122 strings out of 493299
+ 69221 string characters out of 3136791
+ 165661 words of memory out of 3000000
+ 8409 multiletter control sequences out of 15000+200000
+ 38592 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,16n,45p,659b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on modelo_utfpr.pdf (24 pages, 1012630 bytes).
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on modelo_utfpr.pdf (22 pages, 1037605 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
