@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  15 OCT 2017 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.8.21)  27 OCT 2017 16:35
 entering extended mode
 **./modelo_utfpr.tex
 (modelo_utfpr.tex
@@ -557,12 +557,12 @@ Cap\'{\i }tulo 1.
 
 
 ]
-Overfull \hbox (1.21948pt too wide) in paragraph at lines 22--25
+Overfull \hbox (1.21948pt too wide) in paragraph at lines 31--34
 \OT1/ptm/m/n/12 de tens[]ao de curta dura[][]ao em re-des de distribui[][]ao de
  ener-gia el[]etrica, man-tendo as informa[][]oes
  []
 
-) [7]
+[7]) [8]
 \openout2 = `./Capitulos/capitulo2.aux'.
 
  (Capitulos/capitulo2.tex
@@ -583,11 +583,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\OT1/ptm/b/n/12 Amplitude da
  []
 
-[8
+[9
 
 
 
-] [9] <./Figuras/Interrupt.png, id=38, 777.90625pt x 564.1075pt>
+] [10] <./Figuras/Interrupt.png, id=41, 777.90625pt x 564.1075pt>
 File: ./Figuras/Interrupt.png Graphic file (type png)
 
 <use ./Figuras/Interrupt.png>
@@ -599,53 +599,53 @@ Overfull \hbox (5.51508pt too wide) in paragraph at lines 85--86
 ondi[][]oes de de-feito no sis-tema, comuta[][]ao
  []
 
-<./Figuras/sag.png, id=39, 693.59125pt x 490.83376pt>
+<./Figuras/sag.png, id=42, 693.59125pt x 490.83376pt>
 File: ./Figuras/sag.png Graphic file (type png)
  <use ./Figuras/sag.png>
 Package pdftex.def Info: ./Figuras/sag.png used on input line 91.
 (pdftex.def)             Requested size: 227.61581pt x 161.07689pt.
 
-[10 <./Figuras/Interrupt.png>]
-<./Figuras/swell.png, id=43, 943.525pt x 628.3475pt>
+[11 <./Figuras/Interrupt.png>]
+<./Figuras/swell.png, id=46, 943.525pt x 628.3475pt>
 File: ./Figuras/swell.png Graphic file (type png)
  <use ./Figuras/swell.png>
 Package pdftex.def Info: ./Figuras/swell.png used on input line 104.
 (pdftex.def)             Requested size: 227.61678pt x 151.58308pt.
 
-[11 <./Figuras/sag.png> <./Figuras/swell.png>]
-<./Figuras/cerebotDiagram.png, id=47, 641.39626pt x 466.74374pt>
+[12 <./Figuras/sag.png> <./Figuras/swell.png>]
+<./Figuras/cerebotDiagram.png, id=51, 641.39626pt x 466.74374pt>
 File: ./Figuras/cerebotDiagram.png Graphic file (type png)
 
 <use ./Figuras/cerebotDiagram.png>
 Package pdftex.def Info: ./Figuras/cerebotDiagram.png used on input line 123.
 (pdftex.def)             Requested size: 227.61407pt x 165.63464pt.
- [12]
-<./Figuras/ADE7758.png, id=52, 532.99126pt x 541.02126pt>
+ [13]
+<./Figuras/ADE7758.png, id=55, 532.99126pt x 541.02126pt>
 File: ./Figuras/ADE7758.png Graphic file (type png)
 
 <use ./Figuras/ADE7758.png>
 Package pdftex.def Info: ./Figuras/ADE7758.png used on input line 135.
 (pdftex.def)             Requested size: 168.17778pt x 170.71153pt.
- [13 <./Figuras/cerebotDiagram.png> <./Figuras/ADE7758.png>] <./Figuras/SagDete
-c.png, id=56, 625.33624pt x 443.6575pt>
+ [14 <./Figuras/cerebotDiagram.png> <./Figuras/ADE7758.png>] <./Figuras/SagDete
+c.png, id=59, 625.33624pt x 443.6575pt>
 File: ./Figuras/SagDetec.png Graphic file (type png)
 
 <use ./Figuras/SagDetec.png>
 Package pdftex.def Info: ./Figuras/SagDetec.png used on input line 149.
 (pdftex.def)             Requested size: 227.62083pt x 161.49022pt.
 
-<./Figuras/SwellDetec.png, id=57, 805.0075pt x 569.12625pt>
+<./Figuras/SwellDetec.png, id=60, 805.0075pt x 569.12625pt>
 File: ./Figuras/SwellDetec.png Graphic file (type png)
 
 <use ./Figuras/SwellDetec.png>
 Package pdftex.def Info: ./Figuras/SwellDetec.png used on input line 163.
 (pdftex.def)             Requested size: 227.61157pt x 160.9174pt.
- [14 <./Figuras/SagDetec.png>]) [15 <./Figuras/SwellDetec.png>]
+ [15 <./Figuras/SagDetec.png>]) [16 <./Figuras/SwellDetec.png>]
 \openout2 = `./Capitulos/capitulo3.aux'.
 
  (Capitulos/capitulo3.tex
 Cap\'{\i }tulo 3.
-[16
+[17
 
 
 
@@ -655,20 +655,20 @@ Overfull \hbox (50.27147pt too wide) in paragraph at lines 27--28
 o do mi-cro-con-tro-la-dor PIC32MX795F512L
  []
 
-<./Figuras/cerebot.png, id=67, 711.65875pt x 570.13pt>
+<./Figuras/cerebot.png, id=70, 711.65875pt x 570.13pt>
 File: ./Figuras/cerebot.png Graphic file (type png)
 
 <use ./Figuras/cerebot.png>
 Package pdftex.def Info: ./Figuras/cerebot.png used on input line 31.
 (pdftex.def)             Requested size: 213.08662pt x 170.70973pt.
- [17 <./Figuras/cerebot.png>]
-<./Figuras/Fluxograma.png, id=71, 744.7825pt x 690.58pt>
+ [18 <./Figuras/cerebot.png>]
+<./Figuras/Fluxograma.png, id=75, 744.7825pt x 690.58pt>
 File: ./Figuras/Fluxograma.png Graphic file (type png)
 
 <use ./Figuras/Fluxograma.png>
 Package pdftex.def Info: ./Figuras/Fluxograma.png used on input line 50.
 (pdftex.def)             Requested size: 184.11546pt x 170.71623pt.
- [18 <./Figuras/Fluxograma.png>]) [19]
+ [19 <./Figuras/Fluxograma.png>]) [20]
 \openout2 = `./Capitulos/capitulo4.aux'.
 
 
@@ -679,7 +679,7 @@ Overfull \hbox (3.53069pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
-) [20
+) [21
 
 
 
@@ -689,7 +689,7 @@ Overfull \hbox (3.53069pt too wide) in paragraph at lines 21--22
  (Capitulos/capitulo5.tex) (modelo_utfpr.bbl)
 
 AED: lastpage setting LastPage
-[21
+[22
 
 
 
@@ -706,22 +706,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5122 strings out of 493299
- 69221 string characters out of 3136791
- 165661 words of memory out of 3000000
- 8409 multiletter control sequences out of 15000+200000
+ 5142 strings out of 493299
+ 69734 string characters out of 3136791
+ 165898 words of memory out of 3000000
+ 8429 multiletter control sequences out of 15000+200000
  38592 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,16n,45p,659b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,16n,45p,659b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on modelo_utfpr.pdf (22 pages, 1037605 bytes).
+Output written on modelo_utfpr.pdf (23 pages, 1042108 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

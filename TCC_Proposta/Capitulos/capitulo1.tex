@@ -13,9 +13,18 @@ Desta maneira, o desenvolvimento de um equipamento de baixo custo, que possibili
 
 \section{Problema}
 
+Devido à grande importância do tema da qualidade da energia elétrica e do impacto causado por variações de tensão, diversos trabalhos abordam esse assunto. Ramasamy et al \cite{ramasamy2005dynamic} descreve um dispositivo para compensação de afundamentos de tensão chamado Restaurador Dinâmico de Tensão (do inglês \textit{Dynamic Voltage Restorer - DVR}). Esse dispositivo atua injetando uma tensão trifásica em série e em sincronia com a tensão da rede de distribuição, atenuando os efeitos de afundamentos de tensão em equipamentos e cargas mais sensíveis.
 
-%\section{Justificativa}
-%Não precisa
+Fitzer e Green \cite{fitzer2002voltage} descrevem uma técnica de detecção de afundamentos de tensão para um Restaurador Dinâmico de Tensão utilizando um método de matriz de espaço de estados, mais rápido que alguns métodos mais antigos, como transformada de fourier e PLL.
+
+Fonseca \cite{fonseca1999calculo} propõe um método para o cálculo de afundamento de tensão pela análise da amplitude e do tempo de duração dos afundamentos em função da posição de falta nas linhas de transmissão, subtransmissão e distribuição. Além disso, descreve a execução de um processo de estimativa de afundamentos através de um método estatístico estocástico.
+
+Ferreira \cite{ferreira2009sistema} apresenta um sistema de detecção e classificação de distúrbios de qualidade de energia elétrica através da decomposição do sinal da tensão. São utilizadas ferramentas de estatística para a classificação dos diferentes tipos de ocorrências, e uma rede neural artificial para a implementação do algoritmo. O sistema é capaz de detectar distúrbios como elevações de tensão, afundamentos de tensão, harmônicos, entre outros.
+
+Através das referências bibliográficas apresentadas nesta seção, e de outros trabalhos presentes na literatura, percebe-se a existência de diversas técnicas para a detecção e correção de distúrbios que afetam a qualidade da energia elétrica. Este trabalho busca contribuir para o tema com o desenvolvimento de um sistema eficiente e de baixo custo para detecção de variações de tensão de curta duração.
+
+Como diferencial, a detecção será feita com um microcontrolador PIC e um circuito integrado ADE7758. Além disso, as informações completas sobre o tipo e data das ocorrências estarão disponíveis online para consulta pelas concessionárias de energia.
+
 
 \section{Objetivos}
 \label{sec:objetivo}
