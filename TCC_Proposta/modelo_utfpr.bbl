@@ -13,9 +13,10 @@ United States of America, 2011. Rev. E.}
 
 \bibitem[ANEEL 2011]{aneel2011qualidade}
 \abntrefinfo{ANEEL}{ANEEL}{2011}
-{ANEEL. \textbf{Procedimentos de Distribuicao de Energia Eletrica no Sistema
-  Eletrico Nacional (PRODIST) - Modulo 8 - Qualidade de Energia}.
-[S.l.], 2011.}
+{ANEEL. \textbf{Procedimentos de Distribui{\c{c}}{\~a}o de Energia El{\'e}trica
+  no Sistema El{\'e}trico Nacional (PRODIST) - M{\'o}dulo 8 - Qualidade de
+  Energia}.
+Bras{\'i}lia, 2011.}
 
 \bibitem[Association et al. 2009]{ieee20091159}
 \abntrefinfo{Association et al.}{ASSOCIATION et al.}{2009}
@@ -51,13 +52,13 @@ United States of America, 2013. Rev B.}
 \abntrefinfo{Fitzer et al.}{FITZER et al.}{2002}
 {FITZER, C.; BARNES, M.; GREEN, P. Voltage sag detection technique for a
   dynamic voltage restorer. In:  IEEE. \textbf{Industry Applications
-  Conference, 2002. 37th IAS Annual Meeting. Conference Record of the}. [S.l.],
-  2002. v.~2, p. 917--924.}
+  Conference, 2002. 37th IAS Annual Meeting. Conference Record of the}. United
+  States of America, 2002. v.~2, p. 917--924.}
 
 \bibitem[Fonseca 1999]{fonseca1999calculo}
 \abntrefinfo{Fonseca}{FONSECA}{1999}
 {FONSECA, V. R. d.~C. C{\'a}lculo estoc{\'a}stico do afundamento de tens{\~a}o.
-\textbf{PPGEE-11199. PUC-MG. Belo Horizonte}, 1999.}
+\textbf{PPGEE-11199. PUC-MG}, Belo Horizonte, 1999.}
 
 \bibitem[MACHADO et al. 2006]{machado2006detecccao}
 \abntrefinfo{MACHADO et al.}{MACHADO et al.}{2006}
@@ -75,16 +76,17 @@ Universidade Federal do Par{\'a}, 2006.}
   Microcontrollers}.
 United States of America, 2011. Rev. E.}
 
-\bibitem[ONS 2011]{ons2gerenciamento}
-\abntrefinfo{ONS}{ONS}{2011}
-{ONS, P. d.~R. \textbf{Gerenciamento dos indicadores de qualidade da energia
-  eletrica da Rede Basica}.
-[S.l.], 2011.}
-
 \bibitem[Ramasamy et al. 2005]{ramasamy2005dynamic}
 \abntrefinfo{Ramasamy et al.}{RAMASAMY et al.}{2005}
 {RAMASAMY, A.~K. et al. Dynamic voltage restorer for voltage sag compensation.
   In:  IEEE. \textbf{Power Electronics and Drives Systems, 2005. PEDS 2005.
-  International Conference on}. [S.l.], 2005. v.~2, p. 1289--1294.}
+  International Conference on}. United States of America, 2005. v.~2, p.
+  1289--1294.}
+
+\bibitem[Rede 2011]{ons2gerenciamento}
+\abntrefinfo{Rede}{REDE}{2011}
+{REDE, P. de. Gerenciamento dos indicadores de qualidade da energia
+  el{\'e}trica da rede b{\'a}sica.
+\textbf{ONS}, Subm{\'o}dulo 2.8, Brasil, 2011.}
 
 \end{thebibliography}

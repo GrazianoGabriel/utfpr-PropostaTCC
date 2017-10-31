@@ -77,7 +77,7 @@ O segundo apresenta a variação do valor instantâneo da tensão durante os dois pr
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/Interrupt.png}
 \caption{Interrupção momentânea de tensão}
-\label{fig:interrupt} \fonte{\cite{ieee20091159}}
+\label{fig:interrupt} \fonte{Adaptado de \cite{ieee20091159}}
 \end{figure}
 
 \subsection{Afundamento de Tensão (\textit{Voltage Sag})}
@@ -90,7 +90,7 @@ A figura \ref{fig:sag} ilustra um afundamento instantâneo com tensão remanescent
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/sag.png}
 \caption{Afundamento instantâneo de tensão}
-\label{fig:sag} \fonte{\cite{ieee20091159}}
+\label{fig:sag} \fonte{Adaptado de \cite{ieee20091159}}
 \end{figure}
 
 \subsection{Elevação de Tensão (\textit{Voltage Swell})}
@@ -103,16 +103,24 @@ A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão.
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/swell.png}
 \caption{Elevação instantânea de tensão}
-\label{fig:swell} \fonte{\cite{ieee20091159}}
+\label{fig:swell} \fonte{Adaptado de \cite{ieee20091159}}
 \end{figure}
 
 \section{Microcontrolador PIC32MX795F512L}
 
 Para este trabalho será utilizado o microcontrolador PIC32MX795F512L, fabricado pela empresa \textit{Microchip Technology Incorporated}, que possui unidade de processamento de 32 bits, 512 kB de memória Flash, 128 kB de memória RAM, frequência de operação de 80 MHz e faixa de operação de tensão de 2,3 V a 3,6 V \cite{microchip:pic32}.
 
-O PIC32MX795F512L conta também com 5 Timers de 16 bits, sendo que dois pares podem ser combinados para formar dois Timers de 32 bits \cite{microchip:pic32}. Será explicado no capítulo 3 como esses Timers serão utilizados no trabalho.
+O PIC32MX795F512L conta com 5 Timers de 16 bits, que podem ser combinados em pares para formar Timers de 32 bits. Além disso, o microcontrolador conta com a presença de uma interface para Controle de Acesso Ethernet (MAC) de 10/100 Mbps, que permite uma conexão física Ethernet \cite{microchip:pic32}. 
 
-Outra característica importante desse microcontrolador é a presença de uma interface de controle de acesso ethernet (MAC) de 10/100 Mbps \cite{microchip:pic32} que, em conjunto com o periférico relógio em tempo real (também presente no microcontrolador), permitirá configurar o dispositivo para funcionar como um servidor, salvando as informações de tipo, duração e hora das ocorrências de variações na tensão e disponibilizando-as para consulta online.
+O periférico de calendário e relógio em tempo real, também presente no microcontrolador, permite a contagem do tempo em horas, minutos e segundos, a consulta por dia da semana, dia, mês e ano, além de otimização para uso contínuo da bateria e correção de ano bissexto. O erro apresentado é de aproximadamente $\pm$ 0,66 segundos por mês \cite{microchip:pic32}.
+
+%\begin{itemize}
+%\item[--] Tempo em horas, minutos e segundos;
+%\item[--] Calendário com dia da semana, dia, mês e ano;
+%\item[--] Correção de ano bissexto;
+%\item[--] Otimização para uso longo da bateria;
+%\item[--] Erro de $\pm$ 0,66 segundos por mês.
+%\end{itemize}
 
 O microcontrolador PIC32MX795F512L será utilizado através da placa de desenvolvimento Cerebot MX7cK, que é fabricada pela empresa \textit{Digilent Incorporated}. Essa placa possui 52 pinos de entrada e saída, interface Ethernet 10/100, 5 entradas de interrupção externa e diversos outros periféricos, podendo ser alimentada via USB ou fonte AC-DC externa. \cite{cerebot:mx7ck}.
 
@@ -134,7 +142,7 @@ O ADE7758, fabricado pela empresa \textit{Analog Devices}, é um circuito integra
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/ADE7758.png}
 \caption{Configuração de pinos do circuito integrado ADE7758}
-\label{fig:ade7758} \fonte{\cite{analogdevices:ade7758}}
+\label{fig:ade7758} \fonte{Adaptado de \cite{analogdevices:ade7758}}
 \end{figure}
 
 Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis, descritas abaixo.
@@ -148,7 +156,7 @@ O ADE7758 pode ser programado para detectar uma diminuição no valor absoluto da 
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/SagDetec.png}
 \caption{Detecção de afundamento de tensão}
-\label{fig:SagDetec} \fonte{\cite{analogdevices:ade7758}}
+\label{fig:SagDetec} \fonte{Adaptado de \cite{analogdevices:ade7758}}
 \end{figure} 	
 
 A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaixo de um limiar definido no registrador de nível de afundamento (SAGLVL[7:0]), durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis meio ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo, quando a \textit{flag} que indica o afundamento é colocada em nível lógico alto para a fase de tensão correspondente (Bits 1 até 3 no registrador da interrupção)  \cite{analogdevices:ade7758}. %Pag 25 datasheet
@@ -162,7 +170,7 @@ Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sob
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/SwellDetec.png}
 \caption{Detecção de elevação de tensão}
-\label{fig:SwellDetec} \fonte{\cite{analogdevices:ade7758}}
+\label{fig:SwellDetec} \fonte{Adaptado de \cite{analogdevices:ade7758}}
 \end{figure}
 
 \subsection{Medição de Frequência} %Pag 25 datasheet
