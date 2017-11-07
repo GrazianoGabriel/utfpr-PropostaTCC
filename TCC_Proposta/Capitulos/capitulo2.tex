@@ -11,14 +11,13 @@ Usualmente as VTCD referem-se à tensão fase-neutro, podendo ser descritas monofa
 
 A duração das VTCD é caracterizada pelo tempo percorrido entre o momento em que o valor eficaz da tensão ultrapassa um determinado limiar e o momento em que volta a cruzar esse ponto, podendo ser expresso em segundos ou ciclos \cite{ons2gerenciamento}.
 
-
-Na tabela \ref{tab:tipos} é mostrada uma classificação geral dos tipos de variações de tensão de curta duração, e na tabela \ref{tab:VTCD} são apresentados os critérios detalhados para a definição de cada tipo de variação de acordo com a norma vigente da ONS \cite{ons2gerenciamento}.
+Na tabela \ref{tab:tipos} é mostrada uma classificação geral dos tipos de variações de tensão de curta duração e na tabela \ref{tab:VTCD} são apresentados os critérios detalhados para a definição de cada tipo de variação de acordo com a norma vigente da ONS \cite{ons2gerenciamento}.
 
 \begin{table}[H]
 \centering
 \caption{Tipos de VTCD}
 \label{tab:tipos}
-\scalebox{0.9}{
+\scalebox{0.8}{
 \begin{tabular}{ |c|c| }
 \hline
 \textbf{Tipo} & \textbf{Duração} \\ \hline
@@ -33,7 +32,7 @@ Temporários & 3 segundos a 1 minuto \\
 	\centering
 	\caption{Variações de Tensão de Curta Duração}
 	\label{tab:VTCD}
-	\scalebox{0.7}{
+	\scalebox{0.8}{
 	\begin{tabular}{m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
     \hline
     \multicolumn{1}{|c|}{\textbf{Classificação}} & \textbf{Denominação} & \textbf{Duração da Variação} & \textbf{Amplitude da tensão} \\ \hline
@@ -97,7 +96,7 @@ A figura \ref{fig:sag} ilustra um afundamento instantâneo com tensão remanescent
 
 A elevação de tensão é definida por um aumento na tensão eficaz acima de 1,1 pu, com duração descrita na tabela \ref{tab:VTCD}. Assim como no afundamento, sua ocorrência está associada à condições de falhas no sistema, desligamento de grandes cargas ou bancos de capacitores \cite{ieee20091159}.
 
-A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão. No gráfico de cima é mostrada a variação da tensão RMS, com tensão remanescente de aproximadamente 1,15 pu. O segundo gráfico ilustra a variação no valor instântaneo da tensão. 
+A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão. No gráfico de cima é mostrada a variação da tensão RMS com tensão remanescente de aproximadamente 1,15 pu. O segundo gráfico ilustra a variação no valor instântaneo da tensão. 
 
 \begin{figure}[H]
 \caption{Elevação instantânea de tensão}
@@ -131,13 +130,13 @@ Um diagrama com os principais periféricos da Cerebot MX7cK é apresentado na figu
 O ADE7758, fabricado pela empresa \textit{Analog Devices}, é um circuito integrado medidor de energia elétrica trifásica, de alta precisão, com interface serial e alimentação de 5V. Esse circuito conta com seis entradas analógicas, divididas em dois canais: tensão e corrente. O canal de tensão possui três entradas: VAP, VBP e VCP.  \cite{analogdevices:ade7758} 
 
 \begin{figure}[H]
-\caption{Configuração de pinos do circuito integrado ADE7758}
+\caption{Configuração de pinos do ADE7758}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/ADE7758.png}
 \label{fig:ade7758} \fonte{Adaptado de Analog Devices (2011) \nocite{analogdevices:ade7758}}
 \end{figure}
 
-Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis, descritas abaixo.
+Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis, que serão descritas ao longo desta seção.
 
 \subsection{Detecção de afundamento de tensão}
 \label{sec:sag}
@@ -151,12 +150,12 @@ O ADE7758 pode ser programado para detectar uma diminuição no valor absoluto da 
 \label{fig:SagDetec} \fonte{Adaptado de Analog Devices (2011) \nocite{analogdevices:ade7758}}
 \end{figure} 	
 
-A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaixo de um limiar definido no registrador de nível de afundamento (SAGLVL[7:0]), durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis meio ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo, quando a \textit{flag} que indica o afundamento é colocada em nível lógico alto para a fase de tensão correspondente (Bits 1 até 3 no registrador da interrupção)  \cite{analogdevices:ade7758}. %Pag 25 datasheet
+A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaixo de um limiar, definido no registrador de nível de afundamento (SAGLVL[7:0]), durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis meio ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo, quando a \textit{flag} que indica o afundamento é colocada em nível lógico alto para a fase de tensão correspondente (Bits 1 até 3 no registrador da interrupção)  \cite{analogdevices:ade7758}. %Pag 25 datasheet
 
 \subsection{Detecção de Sobretensão}
 \label{sec:swell}
 
-Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sobretensão, quando o valor absoluto da tensão excede um limiar configurado no registrador VPINTLVL[7:0]. O Bit 14 (\textit{PKV flag}) do registrador de interrupção é responsável por gravar a ocorrência da sobretensão. Assim como na detecção de afundamento de tensão, multiplas fases de tensão e corrente podem ser monitoradas individualmente a partir da configuração dos bits PKIRQSEL[5:7] do registrador MMODE \cite{analogdevices:ade7758}. 	
+Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sobretensão, quando o valor absoluto da tensão excede um limiar configurado no registrador VPINTLVL[7:0]. O Bit 14 (\textit{PKV flag}) do registrador de interrupção é responsável por gravar a ocorrência da sobretensão. Assim como na detecção de afundamento de tensão, múltiplas fases de tensão e corrente podem ser monitoradas individualmente a partir da configuração dos bits PKIRQSEL[5:7] do registrador MMODE \cite{analogdevices:ade7758}. 	
 
 \begin{figure}[H]
 %\captionsetup{width=.8\linewidth}
@@ -169,9 +168,9 @@ Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sob
 \subsection{Medição de Frequência} %Pag 25 datasheet
 \label{sec:freq}
 
-Com o circuito integrado ADE7758 é possível fazer a medição da frequência e do período da tensão de linha. A fase que será analisada é selecionada através dos Bits 0 e 1 do registrador MMODE, e o resultado da leitura é armazenado no registrador FREQ, de 12 Bits. \cite{analogdevices:ade7758}.
+Com o circuito integrado ADE7758 é possível fazer a medição da frequência e do período da tensão de linha. A fase que será analisada é selecionada através dos Bits 0 e 1 do registrador MMODE. O resultado da leitura é armazenado no registrador FREQ, de 12 Bits. \cite{analogdevices:ade7758}.
 
-O Bit 7 do registrador LCYCMODE seleciona se a leitura será feita para o período ou para a frequência. Por padrão, esse Bit é configurado em nível lógico baixo, com o registrador mostrando a medição da frequência. Caso o Bit seja configurado em nível lógico alto, o registrador irá mostrar o período.
+O Bit 7 do registrador LCYCMODE seleciona se a leitura será feita para o período ou para a frequência. Por padrão, esse Bit é configurado em nível lógico baixo com o registrador mostrando a medição da frequência. Caso o Bit seja configurado em nível lógico alto, o registrador irá mostrar o período.
 
 \subsection{Medição de Tensão RMS}
 \label{sec:rmsade}
