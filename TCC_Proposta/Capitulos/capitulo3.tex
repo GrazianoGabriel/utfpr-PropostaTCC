@@ -27,10 +27,10 @@ Nesta etapa, o objetivo é o estudo prático do funcionamento dos materias que ser
 Além disso, será feito um estudo quanto a configuração do microcontrolador PIC32MX795F512L como um servidor TCP/IP, com a realização de testes para sua correta operação.  
 
 \begin{figure}[H]
+\caption{Placa de desenvolvimento Cerebot MX7cK}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/cerebot.png}
-\caption{Placa de desenvolvimento Cerebot MX7cK}
-\label{fig:cerebot} \fonte{\cite{cerebot:mx7ck}}
+\label{fig:cerebot} \fonte{Diligent Incorporated (2013) \nocite{cerebot:mx7ck}}
 \end{figure}
 
 \subsection{Aplicação dos conceitos teóricos}
@@ -45,16 +45,18 @@ Essa interrupção irá ativar o timer presente no microcontrolador PIC32MX795F512L
 
 No caso da elevação de tensão, a detecção será feita através da configuração do limite superior no registrador VPINTLVL. Caso a tensão proveninente da rede elétrica ultrapasse esse valor, o Bit 14 do registrador de interrupção é acionado para registrar a ocorrência da sobretensão. O timer do microcontrolador também será acionado, calculando o tempo total do evento e enquadrando-o em uma das categorias de VTCD.
 
+Em ambos os casos, a função de medição de frequência do ADE7758, descrita na seção \ref{sec:freq}, será utilizada em conjunto com o timer para que seja feita a medição da quantidade de ciclos da rede, permitindo a caracterização completa de todos os eventos possíveis de VTCD.
+
 \begin{figure}[H]
-\centering
-\includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/Fluxograma.png}
 \caption{Funcionamento básico da primeira abordagem proposta}
+\centering
+\includegraphics[width=9cm, height=8cm,keepaspectratio]{./Figuras/Fluxograma.png}
 \label{fig:abordagem1} \fonte{Autoria própria}
 \end{figure}
 
 A segunda abordagem proposta para o desenvolvimento do sistema é a utilização da medição da tensão eficaz, função do ADE7758 descrita na seção \ref{sec:rmsade}. A tensão proveniente da rede elétrica terá seu valor RMS constantemente monitorado pelo circuito integrado. O resultado dessa medição deve ser comparado com limites pré-configurados, de acordo com a tabela \ref{tab:VTCD}, enquadrando a ocorrência de variação da tensão como interrupção, afundamento ou elevação. 
 
-O timer presente no microcontrolador PIC32MX795F512L será acionado no início do evento, contando a duração de total e, de acordo com o valor medido, enquandrando o evento de VTCD como momentâneo ou temporário. 
+O timer presente no microcontrolador PIC32MX795F512L será acionado em conjunto com a função de medição de frequência do ADE7758, no início do evento. De acordo com a duração total e com o número de ciclos da rede, o evento de VTCD será enquadrado como instântaneo, momentâneo ou temporário. 
 
 \subsection{Análise e validação dos resultados}
 

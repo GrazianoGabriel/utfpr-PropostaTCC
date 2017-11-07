@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.1.4}Eleva\c c\~ao de Tens\~ao (\textit {Voltage Swell})}{13}
 \contentsline {section}{\numberline {2.2}\MakeUppercase {Microcontrolador PIC32MX795F512L}}{14}
 \contentsline {section}{\numberline {2.3}\MakeUppercase {Circuito Integrado ADE7758}}{15}
-\contentsline {subsection}{\numberline {2.3.1}Detec\c c\~ao de afundamento de tens\~ao}{16}
+\contentsline {subsection}{\numberline {2.3.1}Detec\c c\~ao de afundamento de tens\~ao}{15}
 \contentsline {subsection}{\numberline {2.3.2}Detec\c c\~ao de Sobretens\~ao}{16}
 \contentsline {subsection}{\numberline {2.3.3}Medi\c c\~ao de Frequ\^encia}{17}
 \contentsline {subsection}{\numberline {2.3.4}Medi\c c\~ao de Tens\~ao RMS}{17}

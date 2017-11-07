@@ -74,10 +74,10 @@ A figura \ref{fig:interrupt} ilustra a ocorrência de uma interrupção momentânea,
 O segundo apresenta a variação do valor instantâneo da tensão durante os dois primeiros segundos do evento. É importante notar que os gráficos da figura \ref{fig:interrupt} apresentam escalas diferentes para uma melhor visualização.
 
 \begin{figure}[H]
+\caption{Interrupção momentânea de tensão}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/Interrupt.png}
-\caption{Interrupção momentânea de tensão}
-\label{fig:interrupt} \fonte{Adaptado de \cite{ieee20091159}}
+\label{fig:interrupt} \fonte{Adaptado de Association et al. (2009) \nocite{ieee20091159}}
 \end{figure}
 
 \subsection{Afundamento de Tensão (\textit{Voltage Sag})}
@@ -87,10 +87,10 @@ O afundamento ocorre quando a tensão decai para um valor entre 0,1 e 0,9 pu (ten
 A figura \ref{fig:sag} ilustra um afundamento instantâneo com tensão remanescente de aproximadamente 0,2 pu. No primeiro gráfico, o afundamento é mostrado pela variação da tensão eficaz, com uma escala em segundos. No gráfico abaixo, a forma de onda completa da tensão (com escala em milisegundos) mostra uma oscilação maior do valor durante a duração do evento. 
 
 \begin{figure}[H]
+\caption{Afundamento instantâneo de tensão}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/sag.png}
-\caption{Afundamento instantâneo de tensão}
-\label{fig:sag} \fonte{Adaptado de \cite{ieee20091159}}
+\label{fig:sag} \fonte{Adaptado de Association et al. (2009) \nocite{ieee20091159}}
 \end{figure}
 
 \subsection{Elevação de Tensão (\textit{Voltage Swell})}
@@ -100,10 +100,10 @@ A elevação de tensão é definida por um aumento na tensão eficaz acima de 1,1 pu,
 A figura \ref{fig:swell} ilustra uma condição de elevação instantânea de tensão. No gráfico de cima é mostrada a variação da tensão RMS, com tensão remanescente de aproximadamente 1,15 pu. O segundo gráfico ilustra a variação no valor instântaneo da tensão. 
 
 \begin{figure}[H]
+\caption{Elevação instantânea de tensão}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/swell.png}
-\caption{Elevação instantânea de tensão}
-\label{fig:swell} \fonte{Adaptado de \cite{ieee20091159}}
+\label{fig:swell} \fonte{Adaptado de Association el al. (2009) \nocite{20091159}}
 \end{figure}
 
 \section{Microcontrolador PIC32MX795F512L}
@@ -114,23 +114,15 @@ O PIC32MX795F512L conta com 5 Timers de 16 bits, que podem ser combinados em par
 
 O periférico de calendário e relógio em tempo real, também presente no microcontrolador, permite a contagem do tempo em horas, minutos e segundos, a consulta por dia da semana, dia, mês e ano, além de otimização para uso contínuo da bateria e correção de ano bissexto. O erro apresentado é de aproximadamente $\pm$ 0,66 segundos por mês \cite{microchip:pic32}.
 
-%\begin{itemize}
-%\item[--] Tempo em horas, minutos e segundos;
-%\item[--] Calendário com dia da semana, dia, mês e ano;
-%\item[--] Correção de ano bissexto;
-%\item[--] Otimização para uso longo da bateria;
-%\item[--] Erro de $\pm$ 0,66 segundos por mês.
-%\end{itemize}
-
 O microcontrolador PIC32MX795F512L será utilizado através da placa de desenvolvimento Cerebot MX7cK, que é fabricada pela empresa \textit{Digilent Incorporated}. Essa placa possui 52 pinos de entrada e saída, interface Ethernet 10/100, 5 entradas de interrupção externa e diversos outros periféricos, podendo ser alimentada via USB ou fonte AC-DC externa. \cite{cerebot:mx7ck}.
 
 Um diagrama com os principais periféricos da Cerebot MX7cK é apresentado na figura \ref{fig:cerebot}:
 
 \begin{figure}[H]
+\caption{Diagrama do circuito da placa Cerebot MX7cK}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/cerebotDiagram.png}
-\caption{Diagrama do circuito da placa de desenvolvimento Cerebot MX7cK}
-\label{fig:cerebot} \fonte{\cite{cerebot:mx7ck}}
+\label{fig:cerebot} \fonte{Diligent Incorporated (2013) \nocite{cerebot:mx7ck}}
 \end{figure}
 
 
@@ -139,10 +131,10 @@ Um diagrama com os principais periféricos da Cerebot MX7cK é apresentado na figu
 O ADE7758, fabricado pela empresa \textit{Analog Devices}, é um circuito integrado medidor de energia elétrica trifásica, de alta precisão, com interface serial e alimentação de 5V. Esse circuito conta com seis entradas analógicas, divididas em dois canais: tensão e corrente. O canal de tensão possui três entradas: VAP, VBP e VCP.  \cite{analogdevices:ade7758} 
 
 \begin{figure}[H]
+\caption{Configuração de pinos do circuito integrado ADE7758}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/ADE7758.png}
-\caption{Configuração de pinos do circuito integrado ADE7758}
-\label{fig:ade7758} \fonte{Adaptado de \cite{analogdevices:ade7758}}
+\label{fig:ade7758} \fonte{Adaptado de Analog Devices (2011) \nocite{analogdevices:ade7758}}
 \end{figure}
 
 Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis, descritas abaixo.
@@ -153,10 +145,10 @@ Para o propósito deste trabalho, o ADE7758 apresenta algumas funções muito úteis
 O ADE7758 pode ser programado para detectar uma diminuição no valor absoluto da tensão de linha, abaixo de um limiar configurado no registrador de nível de afundamento (\textit{Sag level register}), por um número de meio ciclos.  
 
 \begin{figure}[H]
+\caption{Detecção de afundamento de tensão}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/SagDetec.png}
-\caption{Detecção de afundamento de tensão}
-\label{fig:SagDetec} \fonte{Adaptado de \cite{analogdevices:ade7758}}
+\label{fig:SagDetec} \fonte{Adaptado de Analog Devices (2011) \nocite{analogdevices:ade7758}}
 \end{figure} 	
 
 A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaixo de um limiar definido no registrador de nível de afundamento (SAGLVL[7:0]), durante nove meio ciclos. Como o registrador de ciclos de afundamento indica um limiar de seis meio ciclos (SEGCYC[7:0]=0x06), o evento de afundamento começa a ser registrado após o fim do sexto meio ciclo, quando a \textit{flag} que indica o afundamento é colocada em nível lógico alto para a fase de tensão correspondente (Bits 1 até 3 no registrador da interrupção)  \cite{analogdevices:ade7758}. %Pag 25 datasheet
@@ -167,13 +159,15 @@ A figura \ref{fig:SagDetec} ilustra um exemplo dessa função. A tensão fica abaix
 Na figura \ref{fig:SwellDetec} é possível ver o comportamento da detecção de sobretensão, quando o valor absoluto da tensão excede um limiar configurado no registrador VPINTLVL[7:0]. O Bit 14 (\textit{PKV flag}) do registrador de interrupção é responsável por gravar a ocorrência da sobretensão. Assim como na detecção de afundamento de tensão, multiplas fases de tensão e corrente podem ser monitoradas individualmente a partir da configuração dos bits PKIRQSEL[5:7] do registrador MMODE \cite{analogdevices:ade7758}. 	
 
 \begin{figure}[H]
+%\captionsetup{width=.8\linewidth}
+\caption{Detecção de elevação de tensão}
 \centering
 \includegraphics[width=8cm, height=6cm,keepaspectratio]{./Figuras/SwellDetec.png}
-\caption{Detecção de elevação de tensão}
-\label{fig:SwellDetec} \fonte{Adaptado de \cite{analogdevices:ade7758}}
+\label{fig:SwellDetec} \fonte{Adaptado de Analog Devices (2011) \nocite{analogdevices:ade7758}}
 \end{figure}
 
 \subsection{Medição de Frequência} %Pag 25 datasheet
+\label{sec:freq}
 
 Com o circuito integrado ADE7758 é possível fazer a medição da frequência e do período da tensão de linha. A fase que será analisada é selecionada através dos Bits 0 e 1 do registrador MMODE, e o resultado da leitura é armazenado no registrador FREQ, de 12 Bits. \cite{analogdevices:ade7758}.
 

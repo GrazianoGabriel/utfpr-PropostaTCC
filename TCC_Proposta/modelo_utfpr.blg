@@ -8,10 +8,11 @@ The style file: abnt-alf.bst
 Database file #1: abnt-options.bib
 Database file #2: ./Referencias/reflatex.bib
 Warning--I didn't find a database entry for "abnt-etal-list=99"
+Warning--I didn't find a database entry for "20091159"
 +---------------------------------------------------------+
 | Estilo bibliografico abnt-alf.bst versao 1.52           |
 | Implementa a NBR6023, NBR10520 e NBR10523               |
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-(There was 1 warning)
+(There were 2 warnings)
